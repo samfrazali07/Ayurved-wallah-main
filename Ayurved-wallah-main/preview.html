@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayurved Wallah — Learn Ayurveda. Crack Your Exams.</title>
+  <meta name="description" content="Premier Ayurveda coaching and learning management platform for BAMS, AIAPGET, and State PSC examinations." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ayur: {
+              primary: '#174C32',      // Deep forest green
+              primaryLight: '#216343',
+              primaryDark: '#0e3120',
+              secondary: '#78966B',    // Sage green
+              secondarySoft: '#EBF2E8',
+              bg: '#FAF7EE',           // Warm ivory
+              card: '#FFFFFF',
+              accent: '#C49A45',       // Muted gold
+              accentLight: '#dfb768',
+              text: '#242B25',         // Dark charcoal
+              textMuted: '#58635B',
+              textLight: '#7E8A81',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #FAF7EE;
+      color: #242B25;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    h1, h2, h3, h4, .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7EE;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #78966B;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #174C32;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF7EE] text-[#242B25] antialiased">
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="bg-[#174C32] text-[#FAF7EE] text-[11px] sm:text-xs py-1.5 px-4 text-center font-medium flex items-center justify-center gap-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-[#C49A45] animate-pulse"></span>
+    <span>Admissions Open: AIAPGET 2025–26 Achiever's Masterclass & BAMS Foundation Batches</span>
+    <a href="#fee-structure" class="text-[#C49A45] font-bold hover:underline ml-2 hidden sm:inline-flex items-center gap-1">
+      View Fee Structure &rarr;
+    </a>
+  </div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-40 w-full bg-[#FAF7EE]/95 backdrop-blur-md border-b border-[#78966B]/20 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="relative w-11 h-11 rounded-xl bg-[#174C32] flex items-center justify-center text-white shadow-md border border-[#C49A45]/40 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6 text-[#C49A45]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+            </svg>
+            <div class="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-[#C49A45] rounded-full border-2 border-[#FAF7EE] flex items-center justify-center">
+              <span class="w-1.5 h-1.5 bg-[#174C32] rounded-full"></span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="text-xl sm:text-2xl font-serif font-extrabold tracking-tight text-[#174C32]">Ayurved</span>
+              <span class="text-xl sm:text-2xl font-serif font-light text-[#C49A45]">Wallah</span>
+            </div>
+            <p class="text-[10px] sm:text-[11px] tracking-widest uppercase font-semibold text-[#78966B]">
+              Learn · Practice · Excel
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+          <a href="#" class="px-3 py-2 text-xs xl:text-sm font-semibold text-[#174C32] hover:text-[#C49A45] transition rounded-lg hover:bg-white/60">
+            Home
+          </a>
+          
+          <!-- Courses Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-xs xl:text-sm font-semibold text-[#242B25] hover:text-[#174C32] transition rounded-lg hover:bg-white/60">
+              <span>Courses</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-[#78966B]"></i>
+            </button>
+            <div class="hidden group-hover:block absolute top-full left-0 w-72 bg-white border border-[#C49A45]/30 rounded-2xl shadow-xl p-3 z-50 animate-fadeIn">
+              <div class="text-[10px] uppercase font-bold tracking-wider text-[#78966B] px-3 py-1">Specialized Coaching</div>
+              <a href="#courses" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-[#FAF7EE] transition">
+                <div class="p-1.5 bg-[#EBF2E8] text-[#174C32] rounded-lg mt-0.5"><i data-lucide="graduation-cap" class="w-4 h-4"></i></div>
+                <div>
+                  <div class="text-xs font-bold text-[#174C32]">AIAPGET (PG) Batch</div>
+                  <div class="text-[11px] text-[#58635B]">Brihattrayi & 12,000+ MCQs</div>
+                </div>
+              </a>
+              <a href="#courses" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-[#FAF7EE] transition">
+                <div class="p-1.5 bg-[#EBF2E8] text-[#174C32] rounded-lg mt-0.5"><i data-lucide="book-open" class="w-4 h-4"></i></div>
+                <div>
+                  <div class="text-xs font-bold text-[#174C32]">BAMS Professional (UG)</div>
+                  <div class="text-[11px] text-[#58635B]">1st to Final Prof NCISM Syllabus</div>
+                </div>
+              </a>
+              <a href="#courses" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-[#FAF7EE] transition">
+                <div class="p-1.5 bg-[#EBF2E8] text-[#174C32] rounded-lg mt-0.5"><i data-lucide="award" class="w-4 h-4"></i></div>
+                <div>
+                  <div class="text-xs font-bold text-[#174C32]">Ayurveda Medical Officer (AMO)</div>
+                  <div class="text-[11px] text-[#58635B]">State PSC, UPSC & CCRAS</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Study Materials Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-xs xl:text-sm font-semibold text-[#242B25] hover:text-[#174C32] transition rounded-lg hover:bg-white/60">
+              <span>Study Materials</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-[#78966B]"></i>
+            </button>
+            <div class="hidden group-hover:block absolute top-full left-0 w-72 bg-white border border-[#C49A45]/30 rounded-2xl shadow-xl p-3 z-50 animate-fadeIn">
+              <div class="text-[10px] uppercase font-bold tracking-wider text-[#78966B] px-3 py-1">Academic Library</div>
+              <a href="#study-materials" class="flex items-center gap-2 p-2 rounded-xl hover:bg-[#FAF7EE] text-xs font-medium text-[#174C32]">
+                <i data-lucide="file-text" class="w-4 h-4 text-[#C49A45]"></i>
+                <span>Subject-wise Handwritten Notes</span>
+              </a>
+              <a href="#study-materials" class="flex items-center gap-2 p-2 rounded-xl hover:bg-[#FAF7EE] text-xs font-medium text-[#174C32]">
+                <i data-lucide="file-text" class="w-4 h-4 text-[#C49A45]"></i>
+                <span>Charaka Samhita Shloka Compendium</span>
+              </a>
+              <a href="#study-materials" class="flex items-center gap-2 p-2 rounded-xl hover:bg-[#FAF7EE] text-xs font-medium text-[#174C32]">
+                <i data-lucide="file-text" class="w-4 h-4 text-[#C49A45]"></i>
+                <span>Dravyaguna Plant Mnemonics</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="#pyqs" class="px-3 py-2 text-xs xl:text-sm font-semibold text-[#242B25] hover:text-[#174C32] transition rounded-lg hover:bg-white/60">
+            PYQs
+          </a>
+
+          <a href="#schedule" class="px-3 py-2 text-xs xl:text-sm font-semibold text-[#242B25] hover:text-[#174C32] transition rounded-lg hover:bg-white/60 flex items-center gap-1.5">
+            <span>Class Schedule</span>
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+          </a>
+
+          <!-- More Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-xs xl:text-sm font-semibold text-[#242B25] hover:text-[#174C32] transition rounded-lg hover:bg-white/60">
+              <span>More</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-[#78966B]"></i>
+            </button>
+            <div class="hidden group-hover:block absolute top-full right-0 w-48 bg-white border border-[#C49A45]/30 rounded-2xl shadow-xl p-2 z-50 animate-fadeIn">
+              <a href="#why-us" class="block px-3 py-2 rounded-xl text-xs font-medium text-[#242B25] hover:text-[#174C32] hover:bg-[#FAF7EE]">Why Ayurved Wallah</a>
+              <a href="#results" class="block px-3 py-2 rounded-xl text-xs font-medium text-[#242B25] hover:text-[#174C32] hover:bg-[#FAF7EE]">Results & Hall of Fame</a>
+              <a href="#about-contact" class="block px-3 py-2 rounded-xl text-xs font-medium text-[#242B25] hover:text-[#174C32] hover:bg-[#FAF7EE]">About Us & Faculty</a>
+              <a href="#about-contact" class="block px-3 py-2 rounded-xl text-xs font-medium text-[#242B25] hover:text-[#174C32] hover:bg-[#FAF7EE]">Contact & Helpdesk</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right Side Buttons -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-2 bg-white border border-[#78966B]/30 rounded-xl text-xs text-[#58635B] hover:border-[#C49A45] hover:text-[#174C32] transition shadow-xs">
+            <i data-lucide="search" class="w-4 h-4 text-[#174C32]"></i>
+            <span class="hidden md:inline">Search courses, notes...</span>
+            <kbd class="hidden md:inline px-1.5 py-0.5 bg-[#FAF7EE] border border-[#78966B]/20 rounded text-[10px] font-mono text-[#78966B]">Ctrl K</kbd>
+          </button>
+
+          <button onclick="openLoginModal()" class="px-4 py-2 bg-[#174C32] text-white rounded-xl text-xs font-semibold hover:bg-[#216343] transition shadow-sm flex items-center gap-1.5">
+            <i data-lucide="user" class="w-3.5 h-3.5 text-[#C49A45]"></i>
+            <span>Student Login</span>
+          </button>
+
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-[#174C32] hover:bg-white rounded-xl border border-transparent hover:border-[#78966B]/30">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-[#C49A45]/30 px-5 pt-3 pb-6 space-y-2">
+      <a href="#" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-[#174C32] hover:bg-[#FAF7EE]">Home</a>
+      <a href="#courses" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-[#242B25] hover:bg-[#FAF7EE]">Courses</a>
+      <a href="#dashboard-preview" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-[#242B25] hover:bg-[#FAF7EE]">Student Dashboard</a>
+      <a href="#study-materials" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-[#242B25] hover:bg-[#FAF7EE]">Study Materials</a>
+      <a href="#schedule" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-[#242B25] hover:bg-[#FAF7EE]">Class Schedule</a>
+      <a href="#fee-structure" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-[#242B25] hover:bg-[#FAF7EE]">Fee Structure</a>
+      <a href="#about-contact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-xl text-sm font-semibold text-[#242B25] hover:bg-[#FAF7EE]">About & Contact</a>
+      <div class="pt-3 border-t border-[#FAF7EE] flex flex-col gap-2">
+        <button onclick="toggleMobileMenu(); openLoginModal()" class="w-full py-2.5 bg-[#174C32] text-white font-semibold text-xs rounded-xl flex items-center justify-center gap-2">
+          <i data-lucide="user" class="w-4 h-4 text-[#C49A45]"></i>
+          <span>Student Login Portal</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden bg-[#FAF7EE] py-12 md:py-20 lg:py-24 border-b border-[#78966B]/20">
+    <div class="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 rounded-full bg-[#78966B]/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-24 -mb-24 w-96 h-96 rounded-full bg-[#C49A45]/10 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Side -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF2E8] border border-[#78966B]/30 text-[#174C32] text-xs font-semibold tracking-wide shadow-xs">
+            <span class="text-[#C49A45] font-bold">🌿</span>
+            <span>Your Complete Ayurveda Learning Platform</span>
+          </div>
+
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-black tracking-tight text-[#174C32]">
+              Ayurved <span class="text-[#C49A45] font-normal">Wallah</span>
+            </h1>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-[#242B25] tracking-tight">
+              Learn Ayurveda. <span class="text-[#174C32] underline decoration-[#C49A45]/60 underline-offset-8">Crack Your Exams.</span>
+            </h2>
+          </div>
+
+          <p class="text-base sm:text-lg text-[#58635B] max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans">
+            Expert guidance for <strong class="text-[#174C32] font-semibold">BAMS</strong>, <strong class="text-[#174C32] font-semibold">AIAPGET</strong> and other Ayurveda competitive examinations with structured courses, notes, and national test series.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#courses" class="w-full sm:w-auto px-8 py-3.5 bg-[#174C32] text-white font-semibold text-sm rounded-xl hover:bg-[#216343] transition shadow-md flex items-center justify-center gap-2.5">
+              <span>Explore Courses</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-[#C49A45]"></i>
+            </a>
+            <button onclick="openConsultationModal('App Download & Enquiry')" class="w-full sm:w-auto px-7 py-3.5 bg-white border border-[#C49A45]/60 text-[#174C32] font-semibold text-sm rounded-xl hover:bg-[#FAF7EE] transition shadow-xs flex items-center justify-center gap-2">
+              <i data-lucide="download" class="w-4 h-4 text-[#C49A45]"></i>
+              <span>Download App</span>
+            </button>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-6 border-t border-[#78966B]/20 grid grid-cols-3 gap-2 sm:gap-4 max-w-lg mx-auto lg:mx-0 text-left">
+            <div class="bg-white/80 p-3 rounded-xl border border-[#78966B]/20">
+              <div class="flex items-center gap-1 text-[#C49A45]">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <span class="font-bold text-sm text-[#174C32]">4.9 / 5</span>
+              </div>
+              <div class="text-[11px] text-[#58635B] mt-0.5">15,000+ Students</div>
+            </div>
+            <div class="bg-white/80 p-3 rounded-xl border border-[#78966B]/20">
+              <div class="text-sm font-bold text-[#174C32]">850+</div>
+              <div class="text-[11px] text-[#58635B] mt-0.5">PG & MO Selections</div>
+            </div>
+            <div class="bg-white/80 p-3 rounded-xl border border-[#78966B]/20">
+              <div class="text-sm font-bold text-[#174C32]">50,000+</div>
+              <div class="text-[11px] text-[#58635B] mt-0.5">Samhita MCQs</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Ayurveda Illustration -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl bg-gradient-to-b from-[#174C32] to-[#0f3422] p-2 shadow-2xl border-2 border-[#C49A45]/40 overflow-hidden">
+            <div class="relative rounded-2xl bg-[#FAF7EE] p-6 sm:p-8 overflow-hidden min-h-[420px] flex flex-col justify-between">
+              
+              <!-- Card Header -->
+              <div class="flex items-center justify-between border-b border-[#C49A45]/30 pb-3 z-10">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-lg bg-[#174C32] text-[#C49A45] flex items-center justify-center font-serif font-bold text-xs">चरक</div>
+                  <div>
+                    <div class="text-xs font-bold text-[#174C32]">Charaka Samhita & Sushruta</div>
+                    <div class="text-[10px] text-[#78966B]">Classical Medical Sciences</div>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 bg-[#EBF2E8] text-[#174C32] text-[10px] font-bold rounded-full">Brihattrayi</span>
+              </div>
+
+              <!-- Illustration Visual Stack -->
+              <div class="my-6 relative z-10">
+                <div class="bg-white rounded-2xl p-5 border border-[#C49A45]/30 shadow-md space-y-3">
+                  <div class="flex justify-between items-center text-xs text-[#174C32] font-semibold">
+                    <span>🌿 Tulsi · Ashwagandha · Brahmi</span>
+                    <span class="text-[#C49A45] font-serif">त्रिसूत्र आयुर्वेद</span>
+                  </div>
+
+                  <div class="space-y-2">
+                    <div class="bg-[#174C32] text-white p-2.5 rounded-lg flex items-center justify-between text-xs font-serif font-bold border-l-4 border-[#C49A45]">
+                      <span>चरक संहिता (Charaka Samhita)</span>
+                      <span class="text-[10px] text-[#FAF7EE]/80 font-sans">चक्रपाणि टीका</span>
+                    </div>
+                    <div class="bg-[#216343] text-white p-2.5 rounded-lg flex items-center justify-between text-xs font-serif font-bold border-l-4 border-[#C49A45]">
+                      <span>सुश्रुत संहिता (Sushruta Samhita)</span>
+                      <span class="text-[10px] text-[#FAF7EE]/80 font-sans">डल्हण टीका</span>
+                    </div>
+                    <div class="bg-[#78966B] text-white p-2.5 rounded-lg flex items-center justify-between text-xs font-serif font-bold border-l-4 border-[#C49A45]">
+                      <span>अष्टाङ्ग हृदय (Ashtanga Hridaya)</span>
+                      <span class="text-[10px] text-[#FAF7EE]/80 font-sans">अरुणदत्त टीका</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 pt-3 border-t border-[#FAF7EE] flex items-center justify-between text-xs text-[#58635B]">
+                    <div class="flex items-center gap-2">
+                      <div class="w-7 h-7 rounded-full bg-[#FAF7EE] border border-[#C49A45]/40 flex items-center justify-center text-sm shadow-xs">🥣</div>
+                      <div>
+                        <div class="text-[11px] font-bold text-[#174C32]">खल्व यन्त्र (Mortar & Pestle)</div>
+                        <div class="text-[10px] text-[#78966B]">Rasa Shastra Lab Prep</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-0.5 bg-[#FAF7EE] rounded text-[11px] font-mono text-[#C49A45] font-bold border border-[#C49A45]/30">NCISM Standard</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live Class Floating Pill -->
+              <div class="relative z-10 bg-white/95 backdrop-blur-sm p-3 rounded-xl border border-[#174C32]/20 shadow-md flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-600"></span>
+                  </span>
+                  <div>
+                    <div class="text-xs font-bold text-[#174C32]">Today's Live Class: Charaka Chikitsa</div>
+                    <div class="text-[10px] text-[#58635B]">With Dr. V. K. Shastri · 428 Doctors Attending</div>
+                  </div>
+                </div>
+                <a href="#schedule" class="px-2.5 py-1 bg-[#174C32] text-white text-[11px] font-semibold rounded-lg hover:bg-[#216343] transition">
+                  Join
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK ACCESS SECTION (6 HORIZONTAL CARDS) -->
+  <section class="bg-white py-8 border-b border-[#78966B]/20 relative z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        
+        <a href="#schedule" class="p-4 rounded-2xl bg-[#FAF7EE]/60 border border-[#78966B]/25 hover:border-[#C49A45] hover:bg-[#FAF7EE] transition flex flex-col justify-between group">
+          <div class="flex items-center justify-between mb-3">
+            <div class="w-10 h-10 rounded-xl bg-white border border-[#78966B]/30 flex items-center justify-center text-[#174C32] group-hover:bg-[#174C32] group-hover:text-white transition">
+              <i data-lucide="calendar" class="w-5 h-5 text-[#174C32] group-hover:text-[#C49A45]"></i>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#78966B]"></i>
+          </div>
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold font-serif text-[#174C32] group-hover:text-[#C49A45]">Class Schedule</h3>
+            <p class="text-[11px] text-[#58635B] mt-1 line-clamp-1">View your timetable</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-[#78966B]/15 text-[10px] font-semibold text-[#78966B] uppercase">Live Daily</div>
+        </a>
+
+        <a href="#courses" class="p-4 rounded-2xl bg-[#FAF7EE]/60 border border-[#78966B]/25 hover:border-[#C49A45] hover:bg-[#FAF7EE] transition flex flex-col justify-between group">
+          <div class="flex items-center justify-between mb-3">
+            <div class="w-10 h-10 rounded-xl bg-white border border-[#78966B]/30 flex items-center justify-center text-[#174C32] group-hover:bg-[#174C32] group-hover:text-white transition">
+              <i data-lucide="book-open" class="w-5 h-5 text-[#174C32] group-hover:text-[#C49A45]"></i>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#78966B]"></i>
+          </div>
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold font-serif text-[#174C32] group-hover:text-[#C49A45]">Courses</h3>
+            <p class="text-[11px] text-[#58635B] mt-1 line-clamp-1">Explore all courses</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-[#78966B]/15 text-[10px] font-semibold text-[#78966B] uppercase">UG & PG Batches</div>
+        </a>
+
+        <a href="#study-materials" class="p-4 rounded-2xl bg-[#FAF7EE]/60 border border-[#78966B]/25 hover:border-[#C49A45] hover:bg-[#FAF7EE] transition flex flex-col justify-between group">
+          <div class="flex items-center justify-between mb-3">
+            <div class="w-10 h-10 rounded-xl bg-white border border-[#78966B]/30 flex items-center justify-center text-[#174C32] group-hover:bg-[#174C32] group-hover:text-white transition">
+              <i data-lucide="file-text" class="w-5 h-5 text-[#174C32] group-hover:text-[#C49A45]"></i>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#78966B]"></i>
+          </div>
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold font-serif text-[#174C32] group-hover:text-[#C49A45]">Notes</h3>
+            <p class="text-[11px] text-[#58635B] mt-1 line-clamp-1">Download study material</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-[#78966B]/15 text-[10px] font-semibold text-[#78966B] uppercase">PDF & Audio</div>
+        </a>
+
+        <a href="#pyqs" class="p-4 rounded-2xl bg-[#FAF7EE]/60 border border-[#78966B]/25 hover:border-[#C49A45] hover:bg-[#FAF7EE] transition flex flex-col justify-between group">
+          <div class="flex items-center justify-between mb-3">
+            <div class="w-10 h-10 rounded-xl bg-white border border-[#78966B]/30 flex items-center justify-center text-[#174C32] group-hover:bg-[#174C32] group-hover:text-white transition">
+              <i data-lucide="award" class="w-5 h-5 text-[#174C32] group-hover:text-[#C49A45]"></i>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#78966B]"></i>
+          </div>
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold font-serif text-[#174C32] group-hover:text-[#C49A45]">PYQs</h3>
+            <p class="text-[11px] text-[#58635B] mt-1 line-clamp-1">Previous Year Papers</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-[#78966B]/15 text-[10px] font-semibold text-[#78966B] uppercase">10 Yrs Solved</div>
+        </a>
+
+        <a href="#fee-structure" class="p-4 rounded-2xl bg-[#FAF7EE]/60 border border-[#78966B]/25 hover:border-[#C49A45] hover:bg-[#FAF7EE] transition flex flex-col justify-between group">
+          <div class="flex items-center justify-between mb-3">
+            <div class="w-10 h-10 rounded-xl bg-white border border-[#78966B]/30 flex items-center justify-center text-[#174C32] group-hover:bg-[#174C32] group-hover:text-white transition">
+              <i data-lucide="credit-card" class="w-5 h-5 text-[#174C32] group-hover:text-[#C49A45]"></i>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#78966B]"></i>
+          </div>
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold font-serif text-[#174C32] group-hover:text-[#C49A45]">Fee Structure</h3>
+            <p class="text-[11px] text-[#58635B] mt-1 line-clamp-1">Explore course fees</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-[#78966B]/15 text-[10px] font-semibold text-[#78966B] uppercase">EMI Available</div>
+        </a>
+
+        <button onclick="openConsultationModal('Academic Doubt Support')" class="p-4 rounded-2xl bg-[#FAF7EE]/60 border border-[#78966B]/25 hover:border-[#C49A45] hover:bg-[#FAF7EE] transition flex flex-col justify-between group text-left">
+          <div class="flex items-center justify-between mb-3">
+            <div class="w-10 h-10 rounded-xl bg-white border border-[#78966B]/30 flex items-center justify-center text-[#174C32] group-hover:bg-[#174C32] group-hover:text-white transition">
+              <i data-lucide="message-circle-question" class="w-5 h-5 text-[#174C32] group-hover:text-[#C49A45]"></i>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#78966B]"></i>
+          </div>
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold font-serif text-[#174C32] group-hover:text-[#C49A45]">Doubt Support</h3>
+            <p class="text-[11px] text-[#58635B] mt-1 line-clamp-1">Ask questions</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-[#78966B]/15 text-[10px] font-semibold text-[#78966B] uppercase">24/7 Mentorship</div>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES SECTION -->
+  <section id="courses" class="py-16 md:py-24 bg-[#FAF7EE] border-b border-[#78966B]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#C49A45]/40 text-[#174C32] text-xs font-semibold uppercase tracking-wider shadow-xs">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#C49A45]"></i>
+          <span>Academic Curriculum</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-black text-[#174C32] tracking-tight">Our Courses</h2>
+        <p class="text-base sm:text-lg text-[#58635B] font-medium">Choose your path to success — structured courses taught by premier national institute scholars</p>
+      </div>
+
+      <!-- Course Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        
+        <!-- Course 1 -->
+        <div class="bg-white rounded-3xl border border-[#78966B]/25 hover:border-[#C49A45] shadow-sm hover:shadow-md transition flex flex-col justify-between overflow-hidden group">
+          <div class="p-6 bg-gradient-to-r from-[#174C32] to-[#216343] text-white">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 bg-white/15 text-[11px] font-bold rounded-full uppercase">AIAPGET (PG)</span>
+              <span class="px-2.5 py-1 bg-[#C49A45] text-white text-[11px] font-bold rounded-full">Most Popular</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-serif font-bold text-white">AIAPGET (PG) Achiever's Masterclass 2025–26</h3>
+            <p class="text-xs text-[#FAF7EE]/80 mt-1">Full coverage of Brihattrayi, Laghuttrayi & Integrated Modern Sciences</p>
+            <div class="flex items-center gap-4 mt-4 text-xs text-[#FAF7EE]/90 pt-3 border-t border-white/10">
+              <span>⏳ 12 Months</span>
+              <span>👥 2,840+ Enrolled</span>
+              <span>⭐ 4.9 / 5.0</span>
+            </div>
+          </div>
+          <div class="p-6 space-y-4">
+            <ul class="space-y-2 text-xs text-[#242B25]">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> 250+ Hours of Live Lectures & Shloka Analysis</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> 12,000+ Topic-wise Question Bank & NTA CBT Mock Series</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> Handwritten Mindmaps & Formula Flashcards</li>
+            </ul>
+            <div class="pt-4 border-t border-[#FAF7EE] flex items-center justify-between text-xs">
+              <div>
+                <span class="text-[10px] text-[#78966B] font-bold block uppercase">Faculty Lead</span>
+                <span class="font-semibold text-[#174C32]">Dr. V. K. Shastri (MD Kayachikitsa, NIA)</span>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] text-[#78966B] font-bold block uppercase">Fee (Placeholder)</span>
+                <span class="font-bold text-[#C49A45]">₹18,500 / year</span>
+              </div>
+            </div>
+            <div class="pt-2 flex items-center gap-3">
+              <button onclick="openCourseModal('AIAPGET (PG) Achiever\'s Masterclass 2025–26')" class="flex-1 py-2.5 px-4 bg-[#174C32] text-white rounded-xl text-xs font-semibold hover:bg-[#216343] transition flex items-center justify-center gap-1.5">
+                <span>Explore Course</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#C49A45]"></i>
+              </button>
+              <a href="#fee-structure" class="py-2.5 px-4 bg-[#FAF7EE] border border-[#78966B]/30 text-[#174C32] rounded-xl text-xs font-semibold hover:bg-white transition">
+                View Fees
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="bg-white rounded-3xl border border-[#78966B]/25 hover:border-[#C49A45] shadow-sm hover:shadow-md transition flex flex-col justify-between overflow-hidden group">
+          <div class="p-6 bg-gradient-to-r from-[#174C32] to-[#216343] text-white">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 bg-white/15 text-[11px] font-bold rounded-full uppercase">BAMS Entrance (UG)</span>
+              <span class="px-2.5 py-1 bg-[#C49A45] text-white text-[11px] font-bold rounded-full">University Rankers</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-serif font-bold text-white">BAMS Professional Foundation (1st to 4th Year)</h3>
+            <p class="text-xs text-[#FAF7EE]/80 mt-1">Rachana Sharir, Kriya Sharir, Dravyaguna & Kayachikitsa NCISM Syllabus</p>
+            <div class="flex items-center gap-4 mt-4 text-xs text-[#FAF7EE]/90 pt-3 border-t border-white/10">
+              <span>⏳ 9 Months / Prof</span>
+              <span>👥 4,150+ Enrolled</span>
+              <span>⭐ 4.8 / 5.0</span>
+            </div>
+          </div>
+          <div class="p-6 space-y-4">
+            <ul class="space-y-2 text-xs text-[#242B25]">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> Anatomical 3D Overlays & Marma Sharir Visual Guides</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> Dravyaguna: 120+ Plant Identification Mnemonics</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> Previous 15-Year University Theory & Viva Model Answers</li>
+            </ul>
+            <div class="pt-4 border-t border-[#FAF7EE] flex items-center justify-between text-xs">
+              <div>
+                <span class="text-[10px] text-[#78966B] font-bold block uppercase">Faculty Lead</span>
+                <span class="font-semibold text-[#174C32]">Prof. Dr. Meera Nambiar (MD Ayu, AIIA)</span>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] text-[#78966B] font-bold block uppercase">Fee (Placeholder)</span>
+                <span class="font-bold text-[#C49A45]">₹12,000 / year</span>
+              </div>
+            </div>
+            <div class="pt-2 flex items-center gap-3">
+              <button onclick="openCourseModal('BAMS Professional Foundation (1st to 4th Year)')" class="flex-1 py-2.5 px-4 bg-[#174C32] text-white rounded-xl text-xs font-semibold hover:bg-[#216343] transition flex items-center justify-center gap-1.5">
+                <span>Explore Course</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#C49A45]"></i>
+              </button>
+              <a href="#fee-structure" class="py-2.5 px-4 bg-[#FAF7EE] border border-[#78966B]/30 text-[#174C32] rounded-xl text-xs font-semibold hover:bg-white transition">
+                View Fees
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="bg-white rounded-3xl border border-[#78966B]/25 hover:border-[#C49A45] shadow-sm hover:shadow-md transition flex flex-col justify-between overflow-hidden group">
+          <div class="p-6 bg-gradient-to-r from-[#174C32] to-[#216343] text-white">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 bg-white/15 text-[11px] font-bold rounded-full uppercase">Ayurveda Competitive Exams</span>
+              <span class="px-2.5 py-1 bg-[#C49A45] text-white text-[11px] font-bold rounded-full">Target Govt Jobs</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-serif font-bold text-white">Ayurveda Medical Officer (AMO / PSC / UPSC)</h3>
+            <p class="text-xs text-[#FAF7EE]/80 mt-1">High-yield training for State PSCs, UPSC & Central CCRAS vacancies</p>
+            <div class="flex items-center gap-4 mt-4 text-xs text-[#FAF7EE]/90 pt-3 border-t border-white/10">
+              <span>⏳ 6 Months</span>
+              <span>👥 1,920+ Enrolled</span>
+              <span>⭐ 4.9 / 5.0</span>
+            </div>
+          </div>
+          <div class="p-6 space-y-4">
+            <ul class="space-y-2 text-xs text-[#242B25]">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> State-specific past papers & General Knowledge modules</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> National Health Programs & AYUSH policy updates</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> 100-Question speed recall drills & interview panels</li>
+            </ul>
+            <div class="pt-4 border-t border-[#FAF7EE] flex items-center justify-between text-xs">
+              <div>
+                <span class="text-[10px] text-[#78966B] font-bold block uppercase">Faculty Lead</span>
+                <span class="font-semibold text-[#174C32]">Dr. Arvind Upadhyaya (Former MO, CCRAS)</span>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] text-[#78966B] font-bold block uppercase">Fee (Placeholder)</span>
+                <span class="font-bold text-[#C49A45]">₹14,500</span>
+              </div>
+            </div>
+            <div class="pt-2 flex items-center gap-3">
+              <button onclick="openCourseModal('Ayurveda Medical Officer (AMO / PSC / UPSC)')" class="flex-1 py-2.5 px-4 bg-[#174C32] text-white rounded-xl text-xs font-semibold hover:bg-[#216343] transition flex items-center justify-center gap-1.5">
+                <span>Explore Course</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#C49A45]"></i>
+              </button>
+              <a href="#fee-structure" class="py-2.5 px-4 bg-[#FAF7EE] border border-[#78966B]/30 text-[#174C32] rounded-xl text-xs font-semibold hover:bg-white transition">
+                View Fees
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="bg-white rounded-3xl border border-[#78966B]/25 hover:border-[#C49A45] shadow-sm hover:shadow-md transition flex flex-col justify-between overflow-hidden group">
+          <div class="p-6 bg-gradient-to-r from-[#174C32] to-[#216343] text-white">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 bg-white/15 text-[11px] font-bold rounded-full uppercase">Special Batches</span>
+              <span class="px-2.5 py-1 bg-[#C49A45] text-white text-[11px] font-bold rounded-full">Classical Heritage</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-serif font-bold text-white">Charaka & Sushruta Samhita Parayana Batch</h3>
+            <p class="text-xs text-[#FAF7EE]/80 mt-1">Deep Sanskrit recitation, Chakrapani & Dalhana commentary breakdown</p>
+            <div class="flex items-center gap-4 mt-4 text-xs text-[#FAF7EE]/90 pt-3 border-t border-white/10">
+              <span>⏳ 4 Months</span>
+              <span>👥 1,400+ Enrolled</span>
+              <span>⭐ 5.0 / 5.0</span>
+            </div>
+          </div>
+          <div class="p-6 space-y-4">
+            <ul class="space-y-2 text-xs text-[#242B25]">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> Authentic meter chanting with audio recitation library</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> In-depth analysis of 500+ high-frequency competitive shlokas</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#174C32]"></i> Chakrapani commentary simplified for rapid revision</li>
+            </ul>
+            <div class="pt-4 border-t border-[#FAF7EE] flex items-center justify-between text-xs">
+              <div>
+                <span class="text-[10px] text-[#78966B] font-bold block uppercase">Faculty Lead</span>
+                <span class="font-semibold text-[#174C32]">Vaidya R. S. Ramanathan (Samhita Scholar)</span>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] text-[#78966B] font-bold block uppercase">Fee (Placeholder)</span>
+                <span class="font-bold text-[#C49A45]">₹7,500</span>
+              </div>
+            </div>
+            <div class="pt-2 flex items-center gap-3">
+              <button onclick="openCourseModal('Charaka & Sushruta Samhita Parayana Batch')" class="flex-1 py-2.5 px-4 bg-[#174C32] text-white rounded-xl text-xs font-semibold hover:bg-[#216343] transition flex items-center justify-center gap-1.5">
+                <span>Explore Course</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#C49A45]"></i>
+              </button>
+              <a href="#fee-structure" class="py-2.5 px-4 bg-[#FAF7EE] border border-[#78966B]/30 text-[#174C32] rounded-xl text-xs font-semibold hover:bg-white transition">
+                View Fees
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="#fee-structure" class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-[#C49A45] text-[#174C32] rounded-xl text-xs sm:text-sm font-bold hover:bg-[#FAF7EE] transition shadow-xs">
+          <span>View All Courses & Fee Comparison</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#C49A45]"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STUDENT DASHBOARD PREVIEW SECTION -->
+  <section id="dashboard-preview" class="py-16 md:py-24 bg-[#FAF7EE] border-b border-[#78966B]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-[#174C32] rounded-3xl border-2 border-[#C49A45]/40 shadow-2xl p-6 sm:p-10 lg:p-12 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-[#C49A45]/15 blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-white/10 relative z-10">
+          <div class="space-y-2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-[#C49A45]/40 text-[#FAF7EE] text-xs font-semibold">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#C49A45]"></i>
+              <span>Student Learning Management System (LMS)</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-serif font-black tracking-tight text-white">Student Dashboard</h2>
+            <p class="text-sm sm:text-base text-[#FAF7EE]/80 max-w-xl">
+              Continue your learning journey — access your enrolled batches, live lectures, notes, mock tests and performance reports.
+            </p>
+          </div>
+          <button onclick="openLoginModal()" class="px-6 py-3.5 bg-[#C49A45] hover:bg-[#d4a84e] text-white font-bold text-xs sm:text-sm rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span>Student Login</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Dashboard Preview Grid -->
+        <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-6 relative z-10">
+          
+          <!-- LMS Sidebar Navigation -->
+          <div class="lg:col-span-4 space-y-2">
+            <div class="p-3 bg-white/5 rounded-2xl border border-white/10 mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-[#C49A45] flex items-center justify-center text-white font-serif font-bold text-sm">DA</div>
+                <div>
+                  <div class="text-xs font-bold text-white flex items-center gap-1.5">
+                    <span>Dr. Ananya Sharma</span>
+                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                  </div>
+                  <div class="text-[11px] text-[#FAF7EE]/70">Roll: AW-2025-0842 · AIAPGET Batch</div>
+                </div>
+              </div>
+            </div>
+
+            <button onclick="switchDashboardTab('live')" id="tab-btn-live" class="w-full p-3.5 rounded-xl text-xs sm:text-sm font-bold bg-white text-[#174C32] transition flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i data-lucide="play-circle" class="w-4 h-4 text-[#174C32]"></i>
+                <span>Live Classes</span>
+              </div>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#EBF2E8] text-[#174C32] font-medium">Live Today</span>
+            </button>
+
+            <button onclick="switchDashboardTab('materials')" id="tab-btn-materials" class="w-full p-3.5 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/10 text-white transition flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i data-lucide="book-open" class="w-4 h-4 text-[#C49A45]"></i>
+                <span>Study Materials</span>
+              </div>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-white/80">64 PDFs</span>
+            </button>
+
+            <button onclick="switchDashboardTab('tests')" id="tab-btn-tests" class="w-full p-3.5 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/10 text-white transition flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i data-lucide="file-check" class="w-4 h-4 text-[#C49A45]"></i>
+                <span>Mock Tests</span>
+              </div>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-white/80">NTA CBT</span>
+            </button>
+
+            <button onclick="switchDashboardTab('performance')" id="tab-btn-performance" class="w-full p-3.5 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/10 text-white transition flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i data-lucide="bar-chart-3" class="w-4 h-4 text-[#C49A45]"></i>
+                <span>Performance Report</span>
+              </div>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-white/80">AIR 14</span>
+            </button>
+
+            <button onclick="switchDashboardTab('courses')" id="tab-btn-courses" class="w-full p-3.5 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/10 text-white transition flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i data-lucide="graduation-cap" class="w-4 h-4 text-[#C49A45]"></i>
+                <span>My Courses</span>
+              </div>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-white/80">2 Active</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Display Box -->
+          <div class="lg:col-span-8 bg-white/10 border border-white/15 rounded-2xl p-5 sm:p-6 backdrop-blur-md min-h-[340px] flex flex-col justify-between" id="dashboard-viewport">
+            <div id="content-live" class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-[#C49A45] flex items-center gap-2">
+                  <i data-lucide="play-circle" class="w-4 h-4"></i>
+                  Today's Live Class Schedule
+                </h3>
+                <span class="text-xs text-[#FAF7EE]/70 font-mono">Tuesday · Nov 03</span>
+              </div>
+              <div class="bg-white/10 p-4 rounded-xl border border-white/10 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-2 py-0.5 bg-red-500 text-white text-[10px] font-bold rounded-full animate-pulse">● LIVE NOW</span>
+                  <span class="text-xs text-[#FAF7EE]/80">07:30 PM – 09:30 PM</span>
+                </div>
+                <h4 class="text-base font-serif font-bold text-white">Charaka Chikitsa Sthana: Gulma & Jvara Chikitsa</h4>
+                <p class="text-xs text-[#FAF7EE]/80">Faculty: Dr. V. K. Shastri · 428 Doctors Present</p>
+                <button onclick="openLoginModal()" class="px-4 py-2 bg-[#C49A45] text-white font-bold text-xs rounded-lg hover:bg-[#d4a84e] transition flex items-center gap-1.5">
+                  <i data-lucide="play-circle" class="w-3.5 h-3.5"></i>
+                  <span>Join Live Classroom</span>
+                </button>
+              </div>
+            </div>
+
+            <div id="content-materials" class="hidden space-y-3">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-[#C49A45]">Active Digital Handouts</h3>
+              <div class="grid grid-cols-2 gap-3 text-xs">
+                <div class="bg-white/10 p-3 rounded-xl">Dravyaguna: 50 Plants Compendium (64 Pages)</div>
+                <div class="bg-white/10 p-3 rounded-xl">Charaka Sutrasthana Chatuska Wise Notes</div>
+                <div class="bg-white/10 p-3 rounded-xl">Sushruta 107 Marma 3D Plates</div>
+                <div class="bg-white/10 p-3 rounded-xl">AIAPGET 2024 Solved with Tika</div>
+              </div>
+            </div>
+
+            <div id="content-tests" class="hidden space-y-3">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-[#C49A45]">NTA CBT Test Series Status</h3>
+              <div class="bg-white/10 p-4 rounded-xl space-y-2">
+                <div class="flex justify-between text-xs font-bold">
+                  <span>AIAPGET National Mock #14</span>
+                  <span class="text-[#C49A45]">AIR 14 / 8,420 (98.6th Percentile)</span>
+                </div>
+                <div class="w-full bg-black/30 rounded-full h-2">
+                  <div class="bg-[#C49A45] h-2 rounded-full" style="width: 88%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="content-performance" class="hidden space-y-3">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-[#C49A45]">Subject Mastery Breakdown</h3>
+              <div class="space-y-2 text-xs">
+                <div class="bg-white/10 p-2 rounded-lg flex justify-between">
+                  <span>Charaka Samhita</span>
+                  <span class="text-[#C49A45] font-bold">94% (Strong)</span>
+                </div>
+                <div class="bg-white/10 p-2 rounded-lg flex justify-between">
+                  <span>Dravyaguna Vijnana</span>
+                  <span class="text-[#C49A45] font-bold">88% (Good)</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="content-courses" class="hidden space-y-3">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-[#C49A45]">Enrolled Batches</h3>
+              <div class="space-y-2 text-xs">
+                <div class="bg-white/10 p-3 rounded-xl flex justify-between">
+                  <span>AIAPGET Achiever's Masterclass 2025–26</span>
+                  <span class="text-green-300 font-bold">Active</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#FAF7EE]/80">
+              <span>Existing student? Log in to open your full dashboard.</span>
+              <button onclick="openLoginModal()" class="text-[#C49A45] font-bold underline">Login &rarr;</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STUDY MATERIALS SECTION -->
+  <section id="study-materials" class="py-16 md:py-24 bg-white border-b border-[#78966B]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF7EE] border border-[#C49A45]/40 text-[#174C32] text-xs font-semibold uppercase tracking-wider shadow-xs">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#C49A45]"></i>
+          <span>Digital Academic Library</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-black text-[#174C32] tracking-tight">Your Learning Resources</h2>
+        <p class="text-base sm:text-lg text-[#58635B] font-medium">Curated subject-wise notes, previous year question papers, and high-yield question banks</p>
+      </div>
+
+      <!-- 4 Primary Resource Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+        
+        <div class="p-6 rounded-3xl bg-[#FAF7EE]/60 border border-[#78966B]/25 hover:border-[#C49A45] hover:bg-white transition flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white border border-[#78966B]/30 flex items-center justify-center text-[#174C32] mb-4">
+              <i data-lucide="file-text" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-base font-serif font-bold text-[#174C32] mb-2">Subject-wise Notes</h3>
+            <p class="text-xs text-[#58635B] leading-relaxed">Handwritten & structured PDF summaries of Dravyaguna, Rasa Shastra, and Samhitas.</p>
+          </div>
+          <button onclick="openNotePreview('Dravyaguna Vijnana: 50 High-Yield Medicinal Plants & Mnemonics')" class="mt-6 pt-4 border-t border-[#78966B]/15 text-xs font-bold text-[#174C32] hover:text-[#C49A45] flex items-center justify-between">
+            <span>Preview Sample Note</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-[#FAF7EE]/60 border border-[#78966B]/25 hover:border-[#C49A45] hover:bg-white transition flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white border border-[#78966B]/30 flex items-center justify-center text-[#174C32] mb-4">
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-base font-serif font-bold text-[#174C32] mb-2">Previous Year Papers</h3>
+            <p class="text-xs text-[#58635B] leading-relaxed">Past 10 years AIAPGET, NIA, BHU & State PSC solved papers with Sanskrit citations.</p>
+          </div>
+          <button onclick="openNotePreview('AIAPGET Solved Papers 2019–2024 with Authentic References')" class="mt-6 pt-4 border-t border-[#78966B]/15 text-xs font-bold text-[#174C32] hover:text-[#C49A45] flex items-center justify-between">
+            <span>Preview Sample PYQ</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-[#FAF7EE]/60 border border-[#78966B]/25 hover:border-[#C49A45] hover:bg-white transition flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white border border-[#78966B]/30 flex items-center justify-center text-[#174C32] mb-4">
+              <i data-lucide="book-open" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-base font-serif font-bold text-[#174C32] mb-2">Practice Questions</h3>
+            <p class="text-xs text-[#58635B] leading-relaxed">25,000+ topic-wise MCQs, assertion-reasoning questions, and shloka identification drills.</p>
+          </div>
+          <button onclick="openNotePreview('Assertion-Reasoning (NTA Pattern) MCQ Bank')" class="mt-6 pt-4 border-t border-[#78966B]/15 text-xs font-bold text-[#174C32] hover:text-[#C49A45] flex items-center justify-between">
+            <span>Preview Sample MCQs</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-[#FAF7EE]/60 border border-[#78966B]/25 hover:border-[#C49A45] hover:bg-white transition flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white border border-[#78966B]/30 flex items-center justify-center text-[#174C32] mb-4">
+              <i data-lucide="video" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-base font-serif font-bold text-[#174C32] mb-2">Recorded Lectures</h3>
+            <p class="text-xs text-[#58635B] leading-relaxed">Full HD video lecture archive with searchable timestamps, bookmarking, and multi-speed playback.</p>
+          </div>
+          <button onclick="openNotePreview('Kayachikitsa & Panchakarma Masterclass Archive')" class="mt-6 pt-4 border-t border-[#78966B]/15 text-xs font-bold text-[#174C32] hover:text-[#C49A45] flex items-center justify-between">
+            <span>Preview Index</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLASS SCHEDULE SECTION -->
+  <section id="schedule" class="py-16 md:py-24 bg-[#FAF7EE] border-b border-[#78966B]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#C49A45]/40 text-[#174C32] text-xs font-semibold uppercase tracking-wider shadow-xs">
+            <i data-lucide="calendar" class="w-3.5 h-3.5 text-[#C49A45]"></i>
+            <span>Live Timetable</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-black text-[#174C32] tracking-tight">Class Schedule</h2>
+          <p class="text-sm sm:text-base text-[#58635B]">Upcoming live classes, Samhita recitations and mock discussions</p>
+        </div>
+      </div>
+
+      <!-- Schedule Table -->
+      <div class="bg-white rounded-3xl border border-[#78966B]/25 shadow-sm overflow-hidden">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-[#174C32] text-white text-xs font-serif uppercase tracking-wider">
+              <th class="py-4 px-6 font-bold">Status & Time</th>
+              <th class="py-4 px-6 font-bold">Subject & Topic</th>
+              <th class="py-4 px-6 font-bold">Course / Batch</th>
+              <th class="py-4 px-6 font-bold">Faculty Member</th>
+              <th class="py-4 px-6 text-right font-bold">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#FAF7EE] text-sm">
+            <tr class="hover:bg-[#FAF7EE]/60 transition">
+              <td class="py-4 px-6">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-100 text-red-700 text-[11px] font-bold animate-pulse">● Live Now</span>
+                <div class="text-xs font-bold text-[#174C32] mt-1">07:30 PM – 09:30 PM</div>
+                <div class="text-[11px] text-[#78966B]">Today, Nov 03</div>
+              </td>
+              <td class="py-4 px-6">
+                <h4 class="font-serif font-bold text-sm text-[#174C32]">Charaka Chikitsa Sthana — Gulma & Jvara</h4>
+                <p class="text-xs text-[#58635B] mt-1">Pathya-Apathya, Classical Kashaya Yog & Chakrapani commentaries</p>
+              </td>
+              <td class="py-4 px-6">
+                <span class="px-2.5 py-1 bg-[#FAF7EE] text-[#174C32] rounded-lg text-xs font-semibold">AIAPGET PG Achievers</span>
+              </td>
+              <td class="py-4 px-6">
+                <div class="font-semibold text-xs text-[#242B25]">Dr. V. K. Shastri</div>
+                <div class="text-[11px] text-[#78966B]">MD (Kayachikitsa, NIA)</div>
+              </td>
+              <td class="py-4 px-6 text-right">
+                <button onclick="openLoginModal()" class="px-4 py-2 bg-[#174C32] text-white rounded-xl text-xs font-bold hover:bg-[#216343] transition flex items-center gap-1.5 ml-auto">
+                  <i data-lucide="video" class="w-3.5 h-3.5"></i>
+                  <span>Join Class</span>
+                </button>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-[#FAF7EE]/60 transition">
+              <td class="py-4 px-6">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-[11px] font-bold">In 32 mins</span>
+                <div class="text-xs font-bold text-[#174C32] mt-1">10:00 PM – 11:15 PM</div>
+                <div class="text-[11px] text-[#78966B]">Today, Nov 03</div>
+              </td>
+              <td class="py-4 px-6">
+                <h4 class="font-serif font-bold text-sm text-[#174C32]">Dravyaguna Vijnana — Mishvaka Varga</h4>
+                <p class="text-xs text-[#58635B] mt-1">Rasa Panchaka breakdown & Botanical identification tricks</p>
+              </td>
+              <td class="py-4 px-6">
+                <span class="px-2.5 py-1 bg-[#FAF7EE] text-[#174C32] rounded-lg text-xs font-semibold">BAMS 2nd Prof Foundation</span>
+              </td>
+              <td class="py-4 px-6">
+                <div class="font-semibold text-xs text-[#242B25]">Prof. Dr. Meera Nambiar</div>
+                <div class="text-[11px] text-[#78966B]">MD (Dravyaguna, AIIA)</div>
+              </td>
+              <td class="py-4 px-6 text-right">
+                <button onclick="openLoginModal()" class="px-4 py-2 bg-[#FAF7EE] border border-[#78966B]/30 text-[#174C32] rounded-xl text-xs font-bold hover:bg-[#174C32] hover:text-white transition flex items-center gap-1.5 ml-auto">
+                  <i data-lucide="video" class="w-3.5 h-3.5"></i>
+                  <span>Set Reminder</span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEE STRUCTURE SECTION -->
+  <section id="fee-structure" class="py-16 md:py-24 bg-white border-b border-[#78966B]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF7EE] border border-[#C49A45]/40 text-[#174C32] text-xs font-semibold uppercase tracking-wider shadow-xs">
+          <i data-lucide="credit-card" class="w-3.5 h-3.5 text-[#C49A45]"></i>
+          <span>Transparent Pricing</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-black text-[#174C32] tracking-tight">Fee Structure</h2>
+        <p class="text-base sm:text-lg text-[#58635B] font-medium">Clear comparison layout with editable placeholder values until official session fees are announced</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Fee Card 1 -->
+        <div class="rounded-3xl p-6 bg-[#FAF7EE]/50 border border-[#78966B]/30 hover:border-[#C49A45] hover:bg-white transition flex flex-col justify-between">
+          <div>
+            <div class="text-[11px] font-bold text-[#78966B] uppercase mb-1">Undergraduate (UG)</div>
+            <h3 class="text-lg font-serif font-bold text-[#174C32]">BAMS University Academic Program</h3>
+            <p class="text-xs text-[#58635B] mt-1 mb-4">Duration: 9–10 Months</p>
+            <div class="py-4 border-y border-[#78966B]/15 mb-4">
+              <span class="text-[10px] text-[#78966B] uppercase font-bold block">Course Fee (Placeholder)</span>
+              <div class="text-2xl font-serif font-black text-[#174C32]">₹12,000 / Year</div>
+              <div class="text-[11px] text-[#78966B] mt-0.5">2 or 3 split installments</div>
+            </div>
+            <ul class="space-y-2 text-xs text-[#242B25] mb-6">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#174C32]"></i> Live lectures for all Prof subjects</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#174C32]"></i> Handwritten PDF notes & diagrams</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#174C32]"></i> 15 Years university solved papers</li>
+            </ul>
+          </div>
+          <button onclick="openConsultationModal('BAMS University Academic Program (Fee Enquiry)')" class="w-full py-3 bg-[#174C32] text-white rounded-xl text-xs font-bold hover:bg-[#216343] transition">
+            Enquire Now
+          </button>
+        </div>
+
+        <!-- Fee Card 2 (Popular) -->
+        <div class="rounded-3xl p-6 bg-[#174C32] text-white border-2 border-[#C49A45] shadow-xl md:-translate-y-2 flex flex-col justify-between relative">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-[#C49A45] text-white text-[11px] font-bold rounded-full uppercase">
+            ★ Most Selected
+          </div>
+          <div>
+            <div class="text-[11px] font-bold text-[#FAF7EE]/70 uppercase mb-1">Postgraduate (PG)</div>
+            <h3 class="text-lg font-serif font-bold text-white">AIAPGET (PG) Achiever's Master</h3>
+            <p class="text-xs text-[#FAF7EE]/80 mt-1 mb-4">Duration: 12 Months (Till Exam)</p>
+            <div class="py-4 border-y border-white/15 mb-4">
+              <span class="text-[10px] text-[#FAF7EE]/70 uppercase font-bold block">Course Fee (Placeholder)</span>
+              <div class="text-2xl font-serif font-black text-[#FAF7EE]">₹18,500 / Full Course</div>
+              <div class="text-[11px] text-[#FAF7EE]/80 mt-0.5">EMI from ₹1,850/mo available</div>
+            </div>
+            <ul class="space-y-2 text-xs text-[#FAF7EE]/90 mb-6">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C49A45]"></i> 300+ Live hours (Brihattrayi)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C49A45]"></i> 12,000+ Topic-wise MCQs</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C49A45]"></i> 60 All-India Grand CBT Mocks</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C49A45]"></i> Printed Study Kit delivered home</li>
+            </ul>
+          </div>
+          <button onclick="openConsultationModal('AIAPGET Achiever\'s Master (Fee Enquiry)')" class="w-full py-3 bg-[#C49A45] hover:bg-[#d4a84e] text-white rounded-xl text-xs font-bold transition shadow-md">
+            Enquire Now
+          </button>
+        </div>
+
+        <!-- Fee Card 3 -->
+        <div class="rounded-3xl p-6 bg-[#FAF7EE]/50 border border-[#78966B]/30 hover:border-[#C49A45] hover:bg-white transition flex flex-col justify-between">
+          <div>
+            <div class="text-[11px] font-bold text-[#78966B] uppercase mb-1">Government Jobs</div>
+            <h3 class="text-lg font-serif font-bold text-[#174C32]">Ayurveda Medical Officer (AMO)</h3>
+            <p class="text-xs text-[#58635B] mt-1 mb-4">Duration: 6 Months Intensive</p>
+            <div class="py-4 border-y border-[#78966B]/15 mb-4">
+              <span class="text-[10px] text-[#78966B] uppercase font-bold block">Course Fee (Placeholder)</span>
+              <div class="text-2xl font-serif font-black text-[#174C32]">₹14,500 / Batch</div>
+              <div class="text-[11px] text-[#78966B] mt-0.5">2 easy split payments</div>
+            </div>
+            <ul class="space-y-2 text-xs text-[#242B25] mb-6">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#174C32]"></i> State PSC & UPSC syllabus</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#174C32]"></i> General Knowledge & AYUSH schemes</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#174C32]"></i> Mock interview board prep</li>
+            </ul>
+          </div>
+          <button onclick="openConsultationModal('AMO Target Program (Fee Enquiry)')" class="w-full py-3 bg-[#174C32] text-white rounded-xl text-xs font-bold hover:bg-[#216343] transition">
+            Enquire Now
+          </button>
+        </div>
+
+        <!-- Fee Card 4 -->
+        <div class="rounded-3xl p-6 bg-[#FAF7EE]/50 border border-[#78966B]/30 hover:border-[#C49A45] hover:bg-white transition flex flex-col justify-between">
+          <div>
+            <div class="text-[11px] font-bold text-[#78966B] uppercase mb-1">Self-Study Practice</div>
+            <h3 class="text-lg font-serif font-bold text-[#174C32]">NTA CBT Mock Test Series</h3>
+            <p class="text-xs text-[#58635B] mt-1 mb-4">Duration: Till Exam Day</p>
+            <div class="py-4 border-y border-[#78966B]/15 mb-4">
+              <span class="text-[10px] text-[#78966B] uppercase font-bold block">Course Fee (Placeholder)</span>
+              <div class="text-2xl font-serif font-black text-[#174C32]">₹4,200 / Year</div>
+              <div class="text-[11px] text-[#78966B] mt-0.5">One-time enrollment</div>
+            </div>
+            <ul class="space-y-2 text-xs text-[#242B25] mb-6">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#174C32]"></i> 60 Topic & 25 Grand Mock Tests</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#174C32]"></i> Detailed Samhita page citations</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#174C32]"></i> All-India Percentile ranking</li>
+            </ul>
+          </div>
+          <button onclick="openConsultationModal('Test Series Only (Fee Enquiry)')" class="w-full py-3 bg-[#174C32] text-white rounded-xl text-xs font-bold hover:bg-[#216343] transition">
+            Enquire Now
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE AYURVED WALLAH (7 PILLARS) -->
+  <section id="why-us" class="py-16 md:py-24 bg-[#FAF7EE] border-b border-[#78966B]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <h2 class="text-3xl sm:text-4xl font-serif font-black text-[#174C32] tracking-tight">Why Choose Ayurved Wallah?</h2>
+        <p class="text-base sm:text-lg text-[#58635B]">Bridging ancient Vedic wisdom with modern EdTech precision to power your medical career.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        
+        <div class="p-6 bg-white rounded-3xl border border-[#78966B]/25 hover:border-[#C49A45] shadow-sm transition">
+          <div class="w-12 h-12 rounded-2xl bg-[#FAF7EE] text-[#174C32] flex items-center justify-center mb-4">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-serif font-bold text-[#174C32]">Premier MD/MS Faculty</h3>
+          <p class="text-xs text-[#58635B] mt-2">Scholars & gold medalists from AIIA New Delhi, NIA Jaipur, and IMS-BHU.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-[#78966B]/25 hover:border-[#C49A45] shadow-sm transition">
+          <div class="w-12 h-12 rounded-2xl bg-[#FAF7EE] text-[#174C32] flex items-center justify-center mb-4">
+            <i data-lucide="book-open" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-serif font-bold text-[#174C32]">Structured Learning Programs</h3>
+          <p class="text-xs text-[#58635B] mt-2">NCISM-aligned micro-schedules with chapter targets and planned Samhita revisions.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-[#78966B]/25 hover:border-[#C49A45] shadow-sm transition">
+          <div class="w-12 h-12 rounded-2xl bg-[#FAF7EE] text-[#174C32] flex items-center justify-center mb-4">
+            <i data-lucide="file-text" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-serif font-bold text-[#174C32]">Comprehensive Study Materials</h3>
+          <p class="text-xs text-[#58635B] mt-2">Handwritten notes, shloka audio, 3D anatomical plates, and botanical charts.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-[#78966B]/25 hover:border-[#C49A45] shadow-sm transition">
+          <div class="w-12 h-12 rounded-2xl bg-[#FAF7EE] text-[#174C32] flex items-center justify-center mb-4">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-serif font-bold text-[#174C32]">10-Year Solved PYQs</h3>
+          <p class="text-xs text-[#58635B] mt-2">AIAPGET and State PSC questions with verified classical Sanskrit citations.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-[#78966B]/25 hover:border-[#C49A45] shadow-sm transition">
+          <div class="w-12 h-12 rounded-2xl bg-[#FAF7EE] text-[#174C32] flex items-center justify-center mb-4">
+            <i data-lucide="file-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-serif font-bold text-[#174C32]">Regular Mock Tests</h3>
+          <p class="text-xs text-[#58635B] mt-2">Simulate real NTA computer exams with negative marking and percentile ranks.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-[#78966B]/25 hover:border-[#C49A45] shadow-sm transition">
+          <div class="w-12 h-12 rounded-2xl bg-[#FAF7EE] text-[#174C32] flex items-center justify-center mb-4">
+            <i data-lucide="message-circle-question" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-serif font-bold text-[#174C32]">Doubt-Solving Support</h3>
+          <p class="text-xs text-[#58635B] mt-2">Direct access to faculty mentors with guaranteed resolution within 6 hours.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-[#78966B]/25 hover:border-[#C49A45] shadow-sm transition">
+          <div class="w-12 h-12 rounded-2xl bg-[#FAF7EE] text-[#174C32] flex items-center justify-center mb-4">
+            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-base font-serif font-bold text-[#174C32]">Student Performance Tracking</h3>
+          <p class="text-xs text-[#58635B] mt-2">Granular subject diagnostics that pinpoint weak topics in Brihattrayi & Dravyaguna.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESULTS & TESTIMONIALS -->
+  <section id="results" class="py-16 md:py-24 bg-white border-b border-[#78966B]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <h2 class="text-3xl sm:text-4xl font-serif font-black text-[#174C32] tracking-tight">Results and Testimonials</h2>
+        <p class="text-base sm:text-lg text-[#58635B]">Celebrating our students' success in AIAPGET and State Medical Officer examinations.</p>
+        <p class="text-[11px] text-[#7E8A81] italic">*All statistics and student testimonials are editable placeholders.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 bg-[#FAF7EE]/60 rounded-3xl border border-[#78966B]/25 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-0.5 bg-[#C49A45] text-white text-[11px] font-bold rounded-full">AIR 04 (Placeholder)</span>
+              <div class="text-[#C49A45]">★★★★★</div>
+            </div>
+            <p class="text-xs text-[#242B25] italic leading-relaxed">
+              "The line-by-line Charaka Samhita breakdown and daily 100-MCQ drills made all the difference. The faculty clarifies every single Sanskrit commentary."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#78966B]/20 mt-4">
+            <h4 class="text-sm font-serif font-bold text-[#174C32]">Dr. Priyanshu Sharma</h4>
+            <div class="text-xs font-semibold text-[#C49A45]">AIIA New Delhi · MD Kayachikitsa</div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-[#FAF7EE]/60 rounded-3xl border border-[#78966B]/25 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-0.5 bg-[#C49A45] text-white text-[11px] font-bold rounded-full">AIR 12 (Placeholder)</span>
+              <div class="text-[#C49A45]">★★★★★</div>
+            </div>
+            <p class="text-xs text-[#242B25] italic leading-relaxed">
+              "Sushruta's Marma Sharir used to terrify me. Dr. Harish Sir's 3D illustrations simplified the entire curriculum into manageable bite-sized revisions."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#78966B]/20 mt-4">
+            <h4 class="text-sm font-serif font-bold text-[#174C32]">Dr. Snehal Patil</h4>
+            <div class="text-xs font-semibold text-[#C49A45]">NIA Jaipur · MS Shalya Tantra</div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-[#FAF7EE]/60 rounded-3xl border border-[#78966B]/25 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-0.5 bg-[#C49A45] text-white text-[11px] font-bold rounded-full">Rank 02 (PSC Placeholder)</span>
+              <div class="text-[#C49A45]">★★★★★</div>
+            </div>
+            <p class="text-xs text-[#242B25] italic leading-relaxed">
+              "The target batches for State PSC and UPSC are unmatched. The integration of modern medicine protocols gave me a tremendous edge in the interview."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#78966B]/20 mt-4">
+            <h4 class="text-sm font-serif font-bold text-[#174C32]">Dr. Abhishek Verma</h4>
+            <div class="text-xs font-semibold text-[#C49A45]">Class-I Medical Officer</div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-[#FAF7EE]/60 rounded-3xl border border-[#78966B]/25 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-0.5 bg-[#C49A45] text-white text-[11px] font-bold rounded-full">AIR 28 (Placeholder)</span>
+              <div class="text-[#C49A45]">★★★★★</div>
+            </div>
+            <p class="text-xs text-[#242B25] italic leading-relaxed">
+              "The handwritten Dravyaguna flashcards and botanical family charts saved at least 200 hours of redundant memorization."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#78966B]/20 mt-4">
+            <h4 class="text-sm font-serif font-bold text-[#174C32]">Dr. Kavita Radhakrishnan</h4>
+            <div class="text-xs font-semibold text-[#C49A45]">ITRA Jamnagar · MD Dravyaguna</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT & CONTACT SECTION -->
+  <section id="about-contact" class="py-16 md:py-24 bg-[#FAF7EE] border-b border-[#78966B]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+        <div class="lg:col-span-7 space-y-4">
+          <h2 class="text-3xl sm:text-4xl font-serif font-black text-[#174C32]">About Ayurved Wallah</h2>
+          <p class="text-sm sm:text-base text-[#58635B] leading-relaxed">
+            Ayurved Wallah is dedicated to making classical Ayurveda education intuitive, structured, and achievable. We combine the rigorous scholarship of Charaka and Sushruta Samhitas with modern EdTech tools to mentor the next generation of Vaidyas.
+          </p>
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="p-4 bg-white rounded-2xl border border-[#78966B]/25">
+              <h3 class="text-xs font-serif font-bold text-[#174C32] uppercase">Our Mission</h3>
+              <p class="text-xs text-[#58635B] mt-1">To simplify Samhita shlokas with modern mnemonics, high-yield notes, and nationwide mock testing.</p>
+            </div>
+            <div class="p-4 bg-white rounded-2xl border border-[#78966B]/25">
+              <h3 class="text-xs font-serif font-bold text-[#174C32] uppercase">Our Vision</h3>
+              <p class="text-xs text-[#58635B] mt-1">To be India's most trusted medical coaching platform for BAMS and AIAPGET aspirants.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-white p-6 rounded-3xl border border-[#C49A45]/30 shadow-md space-y-4">
+          <h3 class="text-base font-serif font-bold text-[#174C32] border-b pb-2">Academic Mentors</h3>
+          <div class="space-y-3 text-xs">
+            <div>
+              <div class="font-bold text-[#174C32]">Dr. V. K. Shastri</div>
+              <div class="text-[#78966B]">MD Kayachikitsa (NIA Jaipur) · 14+ Yrs Teaching</div>
+            </div>
+            <div>
+              <div class="font-bold text-[#174C32]">Prof. Dr. Meera Nambiar</div>
+              <div class="text-[#78966B]">MD Dravyaguna (AIIA New Delhi) · 11+ Yrs Teaching</div>
+            </div>
+            <div>
+              <div class="font-bold text-[#174C32]">Dr. Harish Chandra Sharma</div>
+              <div class="text-[#78966B]">MS Shalya Tantra (IMS-BHU) · 12+ Yrs Teaching</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form & Helpline -->
+      <div class="bg-white rounded-3xl border border-[#78966B]/30 shadow-md overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+        <div class="lg:col-span-5 bg-[#174C32] p-8 text-white space-y-6">
+          <h3 class="text-2xl font-serif font-bold">Contact Our Academic Desk</h3>
+          <p class="text-xs text-[#FAF7EE]/80">Questions regarding admission, batch timings or study materials? Connect with us.</p>
+          <div class="space-y-3 text-xs">
+            <div><strong>Helpline:</strong> +91 800-AYUR-WAL (Placeholder)</div>
+            <div><strong>Email:</strong> admissions@ayurvedwallah.edu</div>
+            <div><strong>Center:</strong> Institutional Area, New Delhi 110001</div>
+          </div>
+          <a href="https://wa.me/" target="_blank" class="inline-flex w-full py-3 bg-[#25D366] text-white rounded-xl font-bold text-xs items-center justify-center gap-2">
+            <span>Chat Directly on WhatsApp</span>
+          </a>
+        </div>
+        <div class="lg:col-span-7 p-8">
+          <h3 class="text-lg font-serif font-bold text-[#174C32] mb-4">Send an Academic Enquiry</h3>
+          <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+            <div class="grid grid-cols-2 gap-3">
+              <input type="text" required placeholder="Your Name" class="p-2.5 bg-[#FAF7EE] border border-[#78966B]/30 rounded-xl text-xs w-full" />
+              <input type="tel" required placeholder="Phone / WhatsApp" class="p-2.5 bg-[#FAF7EE] border border-[#78966B]/30 rounded-xl text-xs w-full" />
+            </div>
+            <input type="email" required placeholder="Email Address" class="p-2.5 bg-[#FAF7EE] border border-[#78966B]/30 rounded-xl text-xs w-full" />
+            <textarea rows="3" required placeholder="Your question or target exam..." class="p-2.5 bg-[#FAF7EE] border border-[#78966B]/30 rounded-xl text-xs w-full"></textarea>
+            <button type="submit" class="w-full py-3 bg-[#174C32] text-white rounded-xl font-bold text-xs hover:bg-[#216343] transition">
+              Submit Enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#174C32] text-white pt-16 pb-8 border-t-4 border-[#C49A45]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-white/10">
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#0e3120] border border-[#C49A45]/40 flex items-center justify-center text-white">
+              <span class="text-lg">🌿</span>
+            </div>
+            <div>
+              <span class="text-xl font-serif font-black text-white">Ayurved </span>
+              <span class="text-xl font-serif text-[#C49A45]">Wallah</span>
+              <p class="text-[10px] tracking-widest uppercase font-semibold text-[#78966B]">Learn · Practice · Excel</p>
+            </div>
+          </div>
+          <p class="text-xs text-[#FAF7EE]/70 max-w-sm">
+            India's premier Ayurveda coaching and learning management platform for BAMS, AIAPGET, and State PSC examinations.
+          </p>
+        </div>
+
+        <div class="space-y-2 text-xs text-[#FAF7EE]/80">
+          <h4 class="font-serif font-bold text-[#C49A45] uppercase">Quick Links</h4>
+          <div><a href="#" class="hover:underline">Home</a></div>
+          <div><a href="#dashboard-preview" class="hover:underline">Student Dashboard</a></div>
+          <div><a href="#schedule" class="hover:underline">Class Schedule</a></div>
+          <div><a href="#fee-structure" class="hover:underline">Fee Structure</a></div>
+        </div>
+
+        <div class="space-y-2 text-xs text-[#FAF7EE]/80">
+          <h4 class="font-serif font-bold text-[#C49A45] uppercase">Courses</h4>
+          <div><a href="#courses" class="hover:underline">AIAPGET (PG) Batch</a></div>
+          <div><a href="#courses" class="hover:underline">BAMS Professional (UG)</a></div>
+          <div><a href="#courses" class="hover:underline">Ayurveda Medical Officer</a></div>
+          <div><a href="#courses" class="hover:underline">Samhita Parayana</a></div>
+        </div>
+
+        <div class="space-y-2 text-xs text-[#FAF7EE]/80">
+          <h4 class="font-serif font-bold text-[#C49A45] uppercase">Resources</h4>
+          <div><a href="#study-materials" class="hover:underline">Subject-wise Notes</a></div>
+          <div><a href="#pyqs" class="hover:underline">Previous Year Papers</a></div>
+          <div><a href="#study-materials" class="hover:underline">MCQ Question Bank</a></div>
+          <div><button onclick="openLoginModal()" class="text-[#C49A45] font-bold">Student Login</button></div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#FAF7EE]/60">
+        <div>&copy; 2026 Ayurved Wallah. All rights reserved.</div>
+        <div class="flex gap-4 mt-2 sm:mt-0">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms & Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+
+  <!-- Search Modal -->
+  <div id="searchModal" class="hidden fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/60 backdrop-blur-sm">
+    <div class="w-full max-w-xl bg-[#FAF7EE] border border-[#C49A45]/40 rounded-2xl shadow-2xl overflow-hidden">
+      <div class="p-4 bg-white border-b flex items-center gap-3">
+        <i data-lucide="search" class="w-5 h-5 text-[#174C32]"></i>
+        <input type="text" id="searchInput" placeholder="Search courses, notes, shlokas..." class="w-full bg-transparent text-sm focus:outline-none" oninput="filterSearchResults(this.value)" />
+        <button onclick="closeSearchModal()" class="text-[#58635B]"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="p-4 max-h-80 overflow-y-auto space-y-2 text-xs" id="searchResults">
+        <div class="p-2.5 bg-white rounded-xl cursor-pointer hover:border-[#C49A45] border border-transparent" onclick="closeSearchModal(); window.location.hash='#courses'">
+          <div class="font-bold text-[#174C32]">AIAPGET (PG) Achiever's Masterclass 2025–26</div>
+          <div class="text-[#58635B]">Brihattrayi, Laghuttrayi & 12,000+ MCQs</div>
+        </div>
+        <div class="p-2.5 bg-white rounded-xl cursor-pointer hover:border-[#C49A45] border border-transparent" onclick="closeSearchModal(); openNotePreview('Dravyaguna Vijnana: 50 High-Yield Plants')">
+          <div class="font-bold text-[#174C32]">Dravyaguna Vijnana: 50 High-Yield Medicinal Plants</div>
+          <div class="text-[#58635B]">Handwritten botanical formulas & Rasa Panchaka notes</div>
+        </div>
+        <div class="p-2.5 bg-white rounded-xl cursor-pointer hover:border-[#C49A45] border border-transparent" onclick="closeSearchModal(); window.location.hash='#schedule'">
+          <div class="font-bold text-[#174C32]">Live Class: Charaka Chikitsa Sthana (Dr. V. K. Shastri)</div>
+          <div class="text-[#58635B]">Today at 07:30 PM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="w-full max-w-md bg-white border border-[#C49A45]/30 rounded-2xl shadow-2xl overflow-hidden relative">
+      <div class="bg-[#174C32] p-6 text-white text-center">
+        <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-white/70 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+        <span class="text-3xl">🌿</span>
+        <h3 class="text-xl font-serif font-bold text-white mt-2">Ayurved Wallah Portal</h3>
+        <p class="text-xs text-[#FAF7EE]/80 mt-1">Student & Faculty Academic Login</p>
+      </div>
+      <div class="p-6 space-y-4">
+        <form onsubmit="handleLoginSubmit(event)" class="space-y-3">
+          <div>
+            <label class="block text-xs font-semibold text-[#174C32] mb-1">Roll No. or Email</label>
+            <input type="text" id="loginId" required placeholder="e.g. AW-2025-0842" class="w-full p-2.5 bg-[#FAF7EE] border border-[#78966B]/30 rounded-xl text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-[#174C32] mb-1">Password</label>
+            <input type="password" id="loginPass" required placeholder="••••••••" class="w-full p-2.5 bg-[#FAF7EE] border border-[#78966B]/30 rounded-xl text-xs" />
+          </div>
+          <button type="button" onclick="fillDemoLogin()" class="w-full py-2 bg-[#FAF7EE] border border-dashed border-[#C49A45] text-[#174C32] text-xs rounded-xl font-medium">
+            ⚡ One-Click Demo Student Credentials
+          </button>
+          <button type="submit" class="w-full py-3 bg-[#174C32] text-white rounded-xl font-bold text-xs hover:bg-[#216343] transition">
+            Enter Student Dashboard
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Note Preview Modal -->
+  <div id="noteModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+    <div class="w-full max-w-2xl bg-white border border-[#C49A45]/40 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
+      <div class="bg-[#174C32] px-6 py-4 text-white flex justify-between items-center">
+        <div>
+          <span class="text-[10px] text-[#C49A45] font-bold uppercase">Ayurved Wallah Scholar Series</span>
+          <h3 id="noteModalTitle" class="text-base font-serif font-bold text-white">Study Material Preview</h3>
+        </div>
+        <button onclick="closeNoteModal()" class="text-white/70 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="p-6 overflow-y-auto bg-[#FAF7EE] text-xs leading-relaxed space-y-4 font-sans">
+        <div class="bg-white p-4 rounded-xl border border-[#78966B]/30 shadow-xs space-y-2">
+          <h4 class="font-serif font-bold text-sm text-[#174C32]">1. HARITAKI (Terminalia chebula - Combretaceae)</h4>
+          <p><strong>Gana:</strong> Prajasthapana, Jvaraghna (Charaka); Parushakadi (Sushruta)</p>
+          <p><strong>Rasa:</strong> Kashaya pradhana (Pancha Rasa except Lavana)</p>
+          <p><strong>Veerya:</strong> Ushna | <strong>Vipaka:</strong> Madhura | <strong>Guna:</strong> Laghu, Ruksha</p>
+          <p><strong>Classical Shloka:</strong> "यस्य माता गृहे नास्ति तस्य माता हरीतकी..."</p>
+        </div>
+        <div class="p-3 bg-[#EBF2E8] border-l-4 border-[#174C32] rounded-r-lg">
+          <strong class="text-[#174C32]">💡 High-Yield Exam Mnemonic:</strong>
+          <span class="block mt-0.5">Haritaki lacks Lavana (Salt). If asked which Rasa is absent in Haritaki, immediately select Lavana.</span>
+        </div>
+      </div>
+      <div class="p-4 bg-white border-t flex justify-between items-center text-xs">
+        <span class="text-[#78966B]">Full 64-page PDF delivered to enrolled students.</span>
+        <button onclick="closeNoteModal(); openConsultationModal('Study Material Enquiry')" class="px-4 py-2 bg-[#174C32] text-white rounded-xl font-bold">
+          Request Full Notes Pack
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Consultation Modal -->
+  <div id="consultModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="w-full max-w-md bg-white border border-[#C49A45]/40 rounded-2xl shadow-2xl overflow-hidden">
+      <div class="bg-[#174C32] p-6 text-white relative">
+        <button onclick="closeConsultModal()" class="absolute top-4 right-4 text-white/70 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+        <span class="text-xs font-bold uppercase tracking-wider text-[#C49A45]">Academic Desk</span>
+        <h3 class="text-xl font-serif font-bold text-white mt-1">Connect with Faculty Mentor</h3>
+      </div>
+      <form onsubmit="handleConsultSubmit(event)" class="p-6 space-y-3">
+        <input type="text" required placeholder="Doctor / Student Name" class="w-full p-2.5 bg-[#FAF7EE] border border-[#78966B]/30 rounded-xl text-xs" />
+        <input type="tel" required placeholder="WhatsApp Number" class="w-full p-2.5 bg-[#FAF7EE] border border-[#78966B]/30 rounded-xl text-xs" />
+        <input type="text" id="consultCourseField" placeholder="Target Course" class="w-full p-2.5 bg-[#FAF7EE] border border-[#78966B]/30 rounded-xl text-xs" />
+        <textarea rows="3" placeholder="Your query or scholarship question..." class="w-full p-2.5 bg-[#FAF7EE] border border-[#78966B]/30 rounded-xl text-xs"></textarea>
+        <button type="submit" class="w-full py-3 bg-[#174C32] text-white rounded-xl font-bold text-xs hover:bg-[#216343] transition">
+          Submit & Request Callback
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu
+    function toggleMobileMenu() {
+      const el = document.getElementById('mobileMenu');
+      el.classList.toggle('hidden');
+    }
+
+    // Search Modal
+    function openSearchModal() {
+      document.getElementById('searchModal').classList.remove('hidden');
+      document.getElementById('searchInput').focus();
+    }
+    function closeSearchModal() {
+      document.getElementById('searchModal').classList.add('hidden');
+    }
+
+    // Login Modal
+    function openLoginModal() {
+      document.getElementById('loginModal').classList.remove('hidden');
+    }
+    function closeLoginModal() {
+      document.getElementById('loginModal').classList.add('hidden');
+    }
+    function fillDemoLogin() {
+      document.getElementById('loginId').value = 'dr.ananya.sharma@ayurvedwallah.edu';
+      document.getElementById('loginPass').value = 'AyurRanker#2026';
+    }
+    function handleLoginSubmit(e) {
+      e.preventDefault();
+      alert('Welcome back, Dr. Ananya Sharma! Redirecting to student dashboard...');
+      closeLoginModal();
+      window.location.hash = '#dashboard-preview';
+    }
+
+    // Dashboard Tabs
+    function switchDashboardTab(tab) {
+      const tabs = ['live', 'materials', 'tests', 'performance', 'courses'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab-btn-' + t);
+        const content = document.getElementById('content-' + t);
+        if (t === tab) {
+          btn.className = "w-full p-3.5 rounded-xl text-xs sm:text-sm font-bold bg-white text-[#174C32] transition flex items-center justify-between";
+          content.classList.remove('hidden');
+        } else {
+          btn.className = "w-full p-3.5 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/10 text-white transition flex items-center justify-between";
+          content.classList.add('hidden');
+        }
+      });
+    }
+
+    // Note Preview Modal
+    function openNotePreview(title) {
+      document.getElementById('noteModalTitle').innerText = title;
+      document.getElementById('noteModal').classList.remove('hidden');
+    }
+    function closeNoteModal() {
+      document.getElementById('noteModal').classList.add('hidden');
+    }
+
+    // Consultation Modal
+    function openConsultationModal(courseName) {
+      if (courseName) {
+        document.getElementById('consultCourseField').value = courseName;
+      }
+      document.getElementById('consultModal').classList.remove('hidden');
+    }
+    function closeConsultModal() {
+      document.getElementById('consultModal').classList.add('hidden');
+    }
+    function handleConsultSubmit(e) {
+      e.preventDefault();
+      alert('Enquiry received! An academic mentor will contact you shortly via WhatsApp/Call.');
+      closeConsultModal();
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your message has been sent to our Academic Helpdesk.');
+      e.target.reset();
+    }
+
+    function openCourseModal(name) {
+      openConsultationModal('Course Details: ' + name);
+    }
+
+    // Keyboard shortcut Ctrl+K
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        openSearchModal();
+      }
+      if (e.key === 'Escape') {
+        closeSearchModal();
+        closeLoginModal();
+        closeNoteModal();
+        closeConsultModal();
+      }
+    });
+  </script>
+</body>
+</html>

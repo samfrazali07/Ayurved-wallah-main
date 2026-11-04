@@ -1,0 +1,106 @@
+export const scheduleData = [
+  {
+    id: "cls-01",
+    subject: "Charaka Chikitsa Sthana — Gulma & Jvara Chikitsa",
+    batch: "AIAPGET PG Achievers Batch 2025",
+    faculty: "Dr. V. K. Shastri",
+    qualification: "MD (Kayachikitsa, NIA Jaipur)",
+    day: "Today",
+    date: "Nov 03, 2026",
+    time: "07:30 PM – 09:30 PM",
+    duration: "120 Mins",
+    status: "Live Now",
+    statusType: "live", // 'live', 'upcoming', 'scheduled'
+    zoomMeetingId: "849 2039 1192",
+    topicHighlights: "Pathya-Apathya, Classical Kashaya Yog & Chakrapani commentaries discussion",
+    attendeeCount: 428
+  },
+  {
+    id: "cls-02",
+    subject: "Dravyaguna Vijnana — Mishvaka Varga & Rasa Panchaka",
+    batch: "BAMS 2nd Prof Foundation",
+    faculty: "Prof. Dr. Meera Nambiar",
+    qualification: "MD (Dravyaguna, AIIA New Delhi)",
+    day: "Today",
+    date: "Nov 03, 2026",
+    time: "10:00 PM – 11:15 PM",
+    duration: "75 Mins",
+    status: "Starting in 32m",
+    statusType: "upcoming",
+    zoomMeetingId: "772 1042 8841",
+    topicHighlights: "Kaphahara Dravyas, Identification tricks & Classical formulations",
+    attendeeCount: 310
+  },
+  {
+    id: "cls-03",
+    subject: "Sushruta Sharirsthana — Marma Sharir & Clinical Traumatology",
+    batch: "AIAPGET PG Achievers Batch 2025",
+    faculty: "Dr. Harish Chandra Sharma",
+    qualification: "MS (Shalya Tantra, IMS-BHU)",
+    day: "Tomorrow",
+    date: "Nov 04, 2026",
+    time: "06:30 AM – 08:00 AM",
+    duration: "90 Mins",
+    status: "Scheduled",
+    statusType: "scheduled",
+    zoomMeetingId: "912 3049 4812",
+    topicHighlights: "107 Marmas classification, Sadyah Pranahara vs Vaikalyakara nuances",
+    attendeeCount: 390
+  },
+  {
+    id: "cls-04",
+    subject: "Rasa Shastra — Maharasa, Uparasa & Sodhana Procedures",
+    batch: "BAMS 2nd & 3rd Prof Combined",
+    faculty: "Dr. Arvind Upadhyaya",
+    qualification: "MD (Rasa Shastra, IPGT&RA Jamnagar)",
+    day: "Tomorrow",
+    date: "Nov 04, 2026",
+    time: "05:00 PM – 06:30 PM",
+    duration: "90 Mins",
+    status: "Scheduled",
+    statusType: "scheduled",
+    zoomMeetingId: "645 8821 3490",
+    topicHighlights: "Abhrak, Gandhaka & Parada purification protocols with video demonstration",
+    attendeeCount: 260
+  },
+  {
+    id: "cls-05",
+    subject: "State PSC & AMO Mock Discussion — Paper 2024 Analysis",
+    batch: "Ayurveda Medical Officer (AMO) Target",
+    faculty: "Dr. Sandeep Jha",
+    qualification: "Former MO, State Health Services",
+    day: "Tomorrow",
+    date: "Nov 04, 2026",
+    time: "08:00 PM – 09:30 PM",
+    duration: "90 Mins",
+    status: "Scheduled",
+    statusType: "scheduled",
+    zoomMeetingId: "532 9012 7741",
+    topicHighlights: "Negative-marking prevention & Rapid recall strategies for 100 MCQs",
+    attendeeCount: 512
+  },
+  {
+    id: "cls-06",
+    subject: "Kriya Sharir — Prakriti Parikshan & Dhatu Poshana Nyaya",
+    batch: "BAMS 1st Prof Special",
+    faculty: "Dr. Ananya Dixit",
+    qualification: "MD (Kriya Sharir)",
+    day: "Wednesday",
+    date: "Nov 05, 2026",
+    time: "07:00 PM – 08:15 PM",
+    duration: "75 Mins",
+    status: "Scheduled",
+    statusType: "scheduled",
+    zoomMeetingId: "411 9023 5521",
+    topicHighlights: "Kshira-Dadhi, Kedari-Kulya and Khale-Kapot Nyaya comparison with mnemonics",
+    attendeeCount: 195
+  }
+];
+
+export const scheduleBatches = [
+  "All Batches",
+  "AIAPGET PG Achievers Batch 2025",
+  "BAMS 2nd Prof Foundation",
+  "Ayurveda Medical Officer (AMO) Target",
+  "BAMS 1st Prof Special"
+];

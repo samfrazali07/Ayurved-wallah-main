@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF7EE;
+    color: #242B25;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Ayurveda manuscript styling & ornamental lines */
+.manuscript-border {
+  border-image: linear-gradient(to right, #174C32 0%, #C49A45 50%, #174C32 100%) 1;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #A87E2C 0%, #C49A45 50%, #E3BE6E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.forest-gradient-bg {
+  background: linear-gradient(135deg, #174C32 0%, #103924 100%);
+}
+
+.subtle-parchment-pattern {
+  background-color: #FAF7EE;
+  background-image: radial-gradient(#78966B 0.65px, transparent 0.65px), radial-gradient(#C49A45 0.65px, #FAF7EE 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+  background-opacity: 0.05;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #78966B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #174C32;
+}
