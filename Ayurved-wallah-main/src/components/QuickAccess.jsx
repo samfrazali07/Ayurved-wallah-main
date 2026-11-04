@@ -8,7 +8,7 @@ export default function QuickAccess({ onOpenConsultation }) {
       title: "Class Schedule",
       desc: "View your live timetable",
       icon: Calendar,
-      href: "#schedule",
+      href: "/class-schedule",
       badge: "Live Daily"
     },
     {
@@ -16,7 +16,7 @@ export default function QuickAccess({ onOpenConsultation }) {
       title: "Courses",
       desc: "Explore UG, PG & MO batches",
       icon: BookOpen,
-      href: "#courses",
+      href: "/courses",
       badge: "5+ Programs"
     },
     {
@@ -24,7 +24,7 @@ export default function QuickAccess({ onOpenConsultation }) {
       title: "Notes",
       desc: "Download study material",
       icon: FileText,
-      href: "#study-materials",
+      href: "/study-materials",
       badge: "Samhita Guides"
     },
     {
@@ -32,7 +32,7 @@ export default function QuickAccess({ onOpenConsultation }) {
       title: "PYQs",
       desc: "Previous Year Papers",
       icon: Award,
-      href: "#pyqs",
+      href: "/pyqs",
       badge: "Solved 10 Yrs"
     },
     {

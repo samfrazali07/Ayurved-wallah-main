@@ -5,10 +5,10 @@ import {
 } from 'lucide-react';
 import { materialsData, materialSubjects, materialTypes } from '../data/materialsData';
 
-export default function StudyMaterials({ onPreviewMaterial }) {
+export default function StudyMaterials({ onPreviewMaterial, initialType = 'All Resource Types' }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('All Subjects');
-  const [selectedType, setSelectedType] = useState('All Resource Types');
+  const [selectedType, setSelectedType] = useState(initialType);
 
   // Filter logic
   const filteredMaterials = materialsData.filter((item) => {

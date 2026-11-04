@@ -41,7 +41,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
         <div className="flex items-center justify-between h-20">
           
           {/* Brand Logo & Tagline */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="/" className="flex items-center gap-3 group">
             {/* Ornate Botanical Leaf Crest */}
             <div className="relative w-11 h-11 rounded-xl bg-[#174C32] flex items-center justify-center text-white shadow-md border border-[#C49A45]/40 group-hover:scale-105 transition-transform duration-300">
               <svg className="w-6 h-6 text-[#C49A45]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -71,7 +71,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
             <a 
-              href="#" 
+              href="/"
               className="px-3 py-2 text-xs xl:text-sm font-semibold text-[#174C32] hover:text-[#C49A45] transition rounded-lg hover:bg-white/60"
             >
               Home
@@ -97,7 +97,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
                     Specialized Coaching
                   </div>
                   <a 
-                    href="#courses" 
+                    href="/courses"
                     className="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-[#FAF7EE] transition"
                     onClick={() => setCoursesDropdown(false)}
                   >
@@ -110,7 +110,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
                     </div>
                   </a>
                   <a 
-                    href="#courses" 
+                    href="/courses"
                     className="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-[#FAF7EE] transition"
                     onClick={() => setCoursesDropdown(false)}
                   >
@@ -123,7 +123,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
                     </div>
                   </a>
                   <a 
-                    href="#courses" 
+                    href="/courses"
                     className="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-[#FAF7EE] transition"
                     onClick={() => setCoursesDropdown(false)}
                   >
@@ -137,7 +137,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
                   </a>
                   <div className="border-t border-[#FAF7EE] mt-1 pt-1">
                     <a 
-                      href="#courses"
+                      href="/courses"
                       className="block text-center py-1.5 text-xs font-semibold text-[#C49A45] hover:underline"
                       onClick={() => setCoursesDropdown(false)}
                     >
@@ -168,7 +168,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
                     Academic Library
                   </div>
                   <a 
-                    href="#study-materials" 
+                    href="/study-materials"
                     className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-[#FAF7EE] transition text-xs font-medium text-[#174C32]"
                     onClick={() => setMaterialsDropdown(false)}
                   >
@@ -176,7 +176,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
                     <span>Subject-wise Handwritten Notes</span>
                   </a>
                   <a 
-                    href="#study-materials" 
+                    href="/study-materials"
                     className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-[#FAF7EE] transition text-xs font-medium text-[#174C32]"
                     onClick={() => setMaterialsDropdown(false)}
                   >
@@ -184,7 +184,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
                     <span>Charaka Samhita Shloka Compendium</span>
                   </a>
                   <a 
-                    href="#study-materials" 
+                    href="/study-materials"
                     className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-[#FAF7EE] transition text-xs font-medium text-[#174C32]"
                     onClick={() => setMaterialsDropdown(false)}
                   >
@@ -192,7 +192,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
                     <span>Dravyaguna Plant Mnemonics</span>
                   </a>
                   <a 
-                    href="#study-materials" 
+                    href="/study-materials"
                     className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-[#FAF7EE] transition text-xs font-medium text-[#174C32]"
                     onClick={() => setMaterialsDropdown(false)}
                   >
@@ -204,14 +204,14 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
             </div>
 
             <a 
-              href="#pyqs" 
+              href="/pyqs"
               className="px-3 py-2 text-xs xl:text-sm font-semibold text-[#242B25] hover:text-[#174C32] transition rounded-lg hover:bg-white/60"
             >
               PYQs
             </a>
 
             <a 
-              href="#schedule" 
+              href="/class-schedule"
               className="px-3 py-2 text-xs xl:text-sm font-semibold text-[#242B25] hover:text-[#174C32] transition rounded-lg hover:bg-white/60 flex items-center gap-1.5"
             >
               <span>Class Schedule</span>
@@ -308,14 +308,14 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
         <div className="lg:hidden bg-white border-b border-[#C49A45]/30 px-5 pt-3 pb-6 space-y-3 shadow-xl animate-fadeIn">
           <div className="space-y-1">
             <a 
-              href="#" 
+              href="/"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2 rounded-xl text-sm font-semibold text-[#174C32] hover:bg-[#FAF7EE]"
             >
               Home
             </a>
             <a 
-              href="#courses" 
+              href="/courses"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2 rounded-xl text-sm font-semibold text-[#242B25] hover:bg-[#FAF7EE]"
             >
@@ -329,21 +329,21 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
               Student Dashboard Preview
             </a>
             <a 
-              href="#study-materials" 
+              href="/study-materials"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2 rounded-xl text-sm font-semibold text-[#242B25] hover:bg-[#FAF7EE]"
             >
               Study Materials & Notes
             </a>
             <a 
-              href="#pyqs" 
+              href="/pyqs"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2 rounded-xl text-sm font-semibold text-[#242B25] hover:bg-[#FAF7EE]"
             >
               PYQs & Question Bank
             </a>
             <a 
-              href="#schedule" 
+              href="/class-schedule"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2 rounded-xl text-sm font-semibold text-[#242B25] hover:bg-[#FAF7EE]"
             >

@@ -117,9 +117,9 @@ export default function Footer({ onOpenSearch, onOpenLogin, onOpenConsultation }
               Quick Links
             </h4>
             <ul className="space-y-2 text-xs text-[#FAF7EE]/80">
-              <li><a href="#" className="hover:text-[#C49A45] transition">Home</a></li>
+              <li><a href="/" className="hover:text-[#C49A45] transition">Home</a></li>
               <li><a href="#dashboard-preview" className="hover:text-[#C49A45] transition">Student Dashboard</a></li>
-              <li><a href="#schedule" className="hover:text-[#C49A45] transition">Class Schedule</a></li>
+              <li><a href="/class-schedule" className="hover:text-[#C49A45] transition">Class Schedule</a></li>
               <li><a href="#fee-structure" className="hover:text-[#C49A45] transition">Fee Structure & EMI</a></li>
               <li><a href="#why-us" className="hover:text-[#C49A45] transition">Why Ayurved Wallah</a></li>
               <li><a href="#results" className="hover:text-[#C49A45] transition">Results & Hall of Fame</a></li>
@@ -132,12 +132,12 @@ export default function Footer({ onOpenSearch, onOpenLogin, onOpenConsultation }
               Courses & Batches
             </h4>
             <ul className="space-y-2 text-xs text-[#FAF7EE]/80">
-              <li><a href="#courses" className="hover:text-[#C49A45] transition">AIAPGET (PG) Achiever's Batch</a></li>
-              <li><a href="#courses" className="hover:text-[#C49A45] transition">BAMS Professional (1st to 4th Year)</a></li>
-              <li><a href="#courses" className="hover:text-[#C49A45] transition">Ayurveda Medical Officer (AMO / PSC)</a></li>
-              <li><a href="#courses" className="hover:text-[#C49A45] transition">Samhita Parayana Special Batch</a></li>
-              <li><a href="#courses" className="hover:text-[#C49A45] transition">All-India NTA CBT Mock Test Series</a></li>
-              <li><a href="#courses" className="hover:text-[#C49A45] transition">NEET & Pre-BAMS Foundation</a></li>
+              <li><a href="/courses" className="hover:text-[#C49A45] transition">AIAPGET (PG) Achiever's Batch</a></li>
+              <li><a href="/courses" className="hover:text-[#C49A45] transition">BAMS Professional (1st to 4th Year)</a></li>
+              <li><a href="/courses" className="hover:text-[#C49A45] transition">Ayurveda Medical Officer (AMO / PSC)</a></li>
+              <li><a href="/courses" className="hover:text-[#C49A45] transition">Samhita Parayana Special Batch</a></li>
+              <li><a href="/courses" className="hover:text-[#C49A45] transition">All-India NTA CBT Mock Test Series</a></li>
+              <li><a href="/courses" className="hover:text-[#C49A45] transition">NEET & Pre-BAMS Foundation</a></li>
             </ul>
           </div>
 
@@ -147,10 +147,10 @@ export default function Footer({ onOpenSearch, onOpenLogin, onOpenConsultation }
               Academic Desk
             </h4>
             <ul className="space-y-2 text-xs text-[#FAF7EE]/80">
-              <li><a href="#study-materials" className="hover:text-[#C49A45] transition">Subject-wise Notes</a></li>
-              <li><a href="#pyqs" className="hover:text-[#C49A45] transition">Previous Year Solved Papers</a></li>
-              <li><a href="#study-materials" className="hover:text-[#C49A45] transition">MCQ Question Bank</a></li>
-              <li><a href="#study-materials" className="hover:text-[#C49A45] transition">Recorded Video Archive</a></li>
+              <li><a href="/study-materials" className="hover:text-[#C49A45] transition">Subject-wise Notes</a></li>
+              <li><a href="/pyqs" className="hover:text-[#C49A45] transition">Previous Year Solved Papers</a></li>
+              <li><a href="/study-materials" className="hover:text-[#C49A45] transition">MCQ Question Bank</a></li>
+              <li><a href="/study-materials" className="hover:text-[#C49A45] transition">Recorded Video Archive</a></li>
               <li>
                 <button onClick={onOpenConsultation} className="hover:text-[#C49A45] transition text-left">
                   Request Counselling Call
