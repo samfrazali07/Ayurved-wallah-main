@@ -141,7 +141,7 @@ export default function NotesPreviewModal({ material, isOpen, onClose }) {
               Close Preview
             </button>
             <a
-              href="#fee-structure"
+              href="/fee-structure"
               onClick={onClose}
               className="flex-1 sm:flex-none px-5 py-2 bg-[#174C32] text-white rounded-xl text-xs font-semibold hover:bg-[#216343] transition flex items-center justify-center gap-2 shadow-sm"
             >

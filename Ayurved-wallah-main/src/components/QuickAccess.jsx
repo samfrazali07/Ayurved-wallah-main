@@ -40,7 +40,7 @@ export default function QuickAccess({ onOpenConsultation }) {
       title: "Fee Structure",
       desc: "Explore course fees & EMI",
       icon: CreditCard,
-      href: "#fee-structure",
+      href: "/fee-structure",
       badge: "Transparent"
     },
     {

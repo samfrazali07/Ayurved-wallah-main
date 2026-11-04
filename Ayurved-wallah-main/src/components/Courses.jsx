@@ -143,7 +143,7 @@ export default function Courses({ onSelectCourse, onEnquireCourse }) {
                   </button>
 
                   <a
-                    href="#fee-structure"
+                    href="/fee-structure"
                     className="py-2.5 px-4 bg-[#FAF7EE] border border-[#78966B]/30 text-[#174C32] rounded-xl text-xs font-semibold hover:bg-white hover:border-[#C49A45] transition text-center shrink-0"
                   >
                     View Fee Structure

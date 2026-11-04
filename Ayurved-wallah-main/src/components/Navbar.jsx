@@ -30,7 +30,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
         <span className="inline-block w-2 h-2 rounded-full bg-[#C49A45] animate-pulse"></span>
         <span>Admissions Open: AIAPGET 2025–26 Achiever's Masterclass & BAMS Foundation Batches</span>
         <a 
-          href="#fee-structure" 
+          href="/fee-structure"
           className="text-[#C49A45] font-bold hover:underline ml-2 hidden sm:inline-flex items-center gap-1"
         >
           View Fee Structure <span aria-hidden="true">&rarr;</span>
@@ -218,6 +218,13 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
               <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
             </a>
 
+            <a
+              href="/fee-structure"
+              className="px-3 py-2 text-xs xl:text-sm font-semibold text-[#242B25] hover:text-[#174C32] transition rounded-lg hover:bg-white/60"
+            >
+              Fee Structure
+            </a>
+
             {/* More Dropdown */}
             <div 
               className="relative"
@@ -350,7 +357,7 @@ export default function Navbar({ onOpenSearch, onOpenLogin, onOpenConsultation }
               Class Schedule & Timetable
             </a>
             <a 
-              href="#fee-structure" 
+              href="/fee-structure"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2 rounded-xl text-sm font-semibold text-[#242B25] hover:bg-[#FAF7EE]"
             >

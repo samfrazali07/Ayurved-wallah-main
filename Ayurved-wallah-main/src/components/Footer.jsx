@@ -120,7 +120,7 @@ export default function Footer({ onOpenSearch, onOpenLogin, onOpenConsultation }
               <li><a href="/" className="hover:text-[#C49A45] transition">Home</a></li>
               <li><a href="#dashboard-preview" className="hover:text-[#C49A45] transition">Student Dashboard</a></li>
               <li><a href="/class-schedule" className="hover:text-[#C49A45] transition">Class Schedule</a></li>
-              <li><a href="#fee-structure" className="hover:text-[#C49A45] transition">Fee Structure & EMI</a></li>
+              <li><a href="/fee-structure" className="hover:text-[#C49A45] transition">Fee Structure & EMI</a></li>
               <li><a href="#why-us" className="hover:text-[#C49A45] transition">Why Ayurved Wallah</a></li>
               <li><a href="#results" className="hover:text-[#C49A45] transition">Results & Hall of Fame</a></li>
             </ul>

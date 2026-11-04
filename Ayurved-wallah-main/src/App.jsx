@@ -21,6 +21,7 @@ import ConsultationModal from './components/ConsultationModal';
 import CoursesPage from './pages/CoursesPage';
 import StudyMaterialsPage from './pages/StudyMaterialsPage';
 import ClassSchedulePage from './pages/ClassSchedulePage';
+import FeeStructurePage from './pages/FeeStructurePage';
 
 export default function App() {
   const [pathname, setPathname] = useState(window.location.pathname);
@@ -53,6 +54,7 @@ export default function App() {
   const isMaterialsPage = pathname === '/study-materials';
   const isPyqsPage = pathname === '/pyqs';
   const isSchedulePage = pathname === '/class-schedule';
+  const isFeeStructurePage = pathname === '/fee-structure';
 
   const pageContent = isCoursesPage ? (
     <CoursesPage
@@ -66,6 +68,10 @@ export default function App() {
     />
   ) : isSchedulePage ? (
     <ClassSchedulePage onJoinClass={handleJoinClass} />
+  ) : isFeeStructurePage ? (
+    <FeeStructurePage
+      onEnquireFee={(plan) => handleOpenConsultationWithCourse(plan)}
+    />
   ) : (
     <>
       <Hero
@@ -82,22 +88,11 @@ export default function App() {
           setConsultationOpen(true);
         }}
       />
-      <Courses
-        onSelectCourse={(course) => setActiveCourseDetail(course)}
-        onEnquireCourse={handleOpenConsultationWithCourse}
-      />
       <StudentDashboard
         onOpenLogin={() => setLoginOpen(true)}
         onOpenSchedule={() => {
           window.location.href = '/class-schedule';
         }}
-      />
-      <StudyMaterials
-        onPreviewMaterial={(material) => setActiveMaterialPreview(material)}
-      />
-      <ClassSchedule onJoinClass={handleJoinClass} />
-      <FeeStructure
-        onEnquireFee={(plan) => handleOpenConsultationWithCourse(plan)}
       />
       <WhyChooseUs />
       <ResultsTestimonials />
